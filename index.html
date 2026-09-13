@@ -3,330 +3,1408 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>HANIFE INDUSTRY | Premium Industrial Solutions</title>
-<meta name="description" content="HANIFE INDUSTRY — Premium Industrial Solutions. CEO ALI.">
+
+<meta name="description"
+content="HANIFE INDUSTRY — Premium Industrial Solutions. CEO ALI.">
+
 <meta name="theme-color" content="#080808">
 
 <style>
-*{margin:0;padding:0;box-sizing:border-box}
-html{scroll-behavior:smooth}
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+html{
+scroll-behavior:smooth;
+}
+
 body{
 font-family:Arial,Helvetica,sans-serif;
-background:#050505;color:#fff;overflow-x:hidden
+background:#050505;
+color:#fff;
+overflow-x:hidden;
 }
-:root{--red:#e50914;--red2:#ff2935;--dark:#050505;--card:#111;--line:#252525;--gray:#999}
-a{text-decoration:none;color:inherit}
-.container{width:90%;max-width:1200px;margin:auto}
-section{padding:90px 0}
+
+:root{
+--red:#e50914;
+--red2:#ff2935;
+--dark:#050505;
+--card:#111;
+--line:#292929;
+--gray:#999;
+}
+
+a{
+text-decoration:none;
+color:inherit;
+}
+
+.container{
+width:90%;
+max-width:1200px;
+margin:auto;
+}
+
+section{
+padding:90px 0;
+}
+
+/* ================= TOP BUSINESS SLIDER ================= */
+
+.top-slider{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:38px;
+background:linear-gradient(90deg,#050505,#170000,#050505);
+border-bottom:1px solid #3a1010;
+z-index:5000;
+overflow:hidden;
+display:flex;
+align-items:center;
+}
+
+.slider-track{
+display:flex;
+white-space:nowrap;
+animation:slideText 25s linear infinite;
+}
+
+.slider-track span{
+font-size:11px;
+font-weight:bold;
+letter-spacing:2px;
+margin-right:70px;
+color:#fff;
+}
+
+.slider-track b{
+color:var(--red);
+}
+
+@keyframes slideText{
+0%{
+transform:translateX(0);
+}
+100%{
+transform:translateX(-50%);
+}
+}
+
+/* ================= HEADER ================= */
 
 header{
-position:fixed;top:0;left:0;width:100%;z-index:999;
-background:rgba(5,5,5,.92);backdrop-filter:blur(12px);
-border-bottom:1px solid #222
+position:fixed;
+top:38px;
+left:0;
+width:100%;
+z-index:4000;
+background:rgba(5,5,5,.94);
+backdrop-filter:blur(14px);
+border-bottom:1px solid #222;
 }
-.navbar{height:72px;display:flex;align-items:center;justify-content:space-between}
-.logo{font-size:23px;font-weight:900;letter-spacing:2px}
-.logo span{color:var(--red)}
-.logo small{display:block;font-size:7px;letter-spacing:4px;color:#777}
-nav{display:flex;gap:26px;align-items:center}
-nav a{font-size:13px;font-weight:bold;color:#ddd;transition:.3s}
-nav a:hover{color:var(--red)}
-.nav-btn{background:var(--red);padding:11px 17px;border-radius:5px;color:white!important}
-.menu{display:none;font-size:28px;cursor:pointer}
 
-/* HERO */
+.navbar{
+height:72px;
+display:flex;
+align-items:center;
+justify-content:space-between;
+}
+
+.logo{
+font-size:23px;
+font-weight:900;
+letter-spacing:2px;
+}
+
+.logo span{
+color:var(--red);
+}
+
+.logo small{
+display:block;
+font-size:7px;
+letter-spacing:4px;
+color:#777;
+margin-top:3px;
+}
+
+nav{
+display:flex;
+gap:26px;
+align-items:center;
+}
+
+nav a{
+font-size:13px;
+font-weight:bold;
+color:#ddd;
+transition:.3s;
+}
+
+nav a:hover{
+color:var(--red);
+}
+
+.nav-btn{
+background:var(--red);
+padding:11px 17px;
+border-radius:5px;
+color:white!important;
+}
+
+.menu{
+display:none;
+font-size:28px;
+cursor:pointer;
+}
+
+/* ================= HERO ================= */
+
 .hero{
-min-height:100vh;display:flex;align-items:center;
-padding-top:100px;
+min-height:100vh;
+display:flex;
+align-items:center;
+padding-top:150px;
+
 background:
-linear-gradient(90deg,rgba(0,0,0,.95),rgba(0,0,0,.65),rgba(0,0,0,.35)),
+linear-gradient(
+90deg,
+rgba(0,0,0,.96),
+rgba(0,0,0,.72),
+rgba(0,0,0,.35)
+),
 url("https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?auto=format&fit=crop&w=1800&q=75")
-center/cover
+center/cover;
 }
-.hero-content{max-width:850px}
+
+.hero-content{
+max-width:850px;
+}
+
 .tag{
-display:inline-block;border:1px solid #8d1017;
-background:rgba(229,9,20,.1);padding:9px 17px;
-border-radius:30px;font-size:11px;letter-spacing:2px;margin-bottom:25px
+display:inline-block;
+border:1px solid #8d1017;
+background:rgba(229,9,20,.1);
+padding:9px 17px;
+border-radius:30px;
+font-size:11px;
+letter-spacing:2px;
+margin-bottom:25px;
 }
-.dot{display:inline-block;width:7px;height:7px;background:var(--red);border-radius:50%;margin-right:8px}
+
+.dot{
+display:inline-block;
+width:7px;
+height:7px;
+background:var(--red);
+border-radius:50%;
+margin-right:8px;
+box-shadow:0 0 15px var(--red);
+}
+
 .hero h1{
 font-size:clamp(55px,9vw,105px);
-line-height:.9;letter-spacing:-4px
+line-height:.9;
+letter-spacing:-4px;
 }
-.hero h1 span{color:var(--red)}
-.hero p{max-width:650px;color:#aaa;font-size:18px;line-height:1.8;margin:28px 0}
-.buttons{display:flex;gap:13px;flex-wrap:wrap}
+
+.hero h1 span{
+color:var(--red);
+text-shadow:0 0 30px rgba(229,9,20,.25);
+}
+
+.hero p{
+max-width:650px;
+color:#aaa;
+font-size:18px;
+line-height:1.8;
+margin:28px 0;
+}
+
+.buttons{
+display:flex;
+gap:13px;
+flex-wrap:wrap;
+}
+
 .btn{
-display:inline-flex;justify-content:center;align-items:center;
-padding:14px 23px;border-radius:5px;font-weight:bold;font-size:13px;
-transition:.3s;border:0;cursor:pointer
+display:inline-flex;
+justify-content:center;
+align-items:center;
+padding:14px 23px;
+border-radius:5px;
+font-weight:bold;
+font-size:13px;
+transition:.3s;
+border:0;
+cursor:pointer;
 }
-.red{background:var(--red);color:white}
-.red:hover{background:var(--red2);transform:translateY(-3px)}
-.outline{border:1px solid #555;background:#111;color:white}
-.outline:hover{background:white;color:#000}
-.hero-stats{display:flex;gap:45px;margin-top:55px}
-.hero-stats strong{display:block;font-size:24px}
-.hero-stats span{font-size:10px;color:#777;text-transform:uppercase;letter-spacing:1px}
 
-/* TITLES */
-.heading{text-align:center;margin-bottom:55px}
-.heading small{color:var(--red);font-size:11px;letter-spacing:3px;font-weight:bold}
-.heading h2{font-size:46px;margin:9px 0}
-.heading p{max-width:650px;margin:auto;color:#777;line-height:1.8}
+.red{
+background:var(--red);
+color:white;
+box-shadow:0 8px 25px rgba(229,9,20,.15);
+}
 
-/* ABOUT */
-.about{background:#090909}
-.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center}
-.about-photo{
-height:500px;border-radius:14px;
+.red:hover{
+background:var(--red2);
+transform:translateY(-3px);
+box-shadow:0 10px 30px rgba(229,9,20,.3);
+}
+
+.outline{
+border:1px solid #555;
+background:#111;
+color:white;
+}
+
+.outline:hover{
+background:white;
+color:#000;
+}
+
+.hero-stats{
+display:flex;
+gap:45px;
+margin-top:55px;
+}
+
+.hero-stats strong{
+display:block;
+font-size:24px;
+}
+
+.hero-stats span{
+font-size:10px;
+color:#777;
+text-transform:uppercase;
+letter-spacing:1px;
+}
+
+/* ================= TITLES ================= */
+
+.heading{
+text-align:center;
+margin-bottom:55px;
+}
+
+.heading small{
+color:var(--red);
+font-size:11px;
+letter-spacing:3px;
+font-weight:bold;
+}
+
+.heading h2{
+font-size:46px;
+margin:9px 0;
+}
+
+.heading p{
+max-width:650px;
+margin:auto;
+color:#777;
+line-height:1.8;
+}
+
+/* ================= CEO TOP FEATURE ================= */
+
+.ceo-top{
 background:
-linear-gradient(0deg,rgba(0,0,0,.8),transparent 60%),
+radial-gradient(circle at center,rgba(229,9,20,.10),transparent 45%),
+#050505;
+padding-top:100px;
+padding-bottom:90px;
+text-align:center;
+}
+
+.ceo-top-label{
+color:var(--red);
+font-size:11px;
+font-weight:bold;
+letter-spacing:4px;
+margin-bottom:22px;
+}
+
+.ceo-image-wrap{
+width:280px;
+height:280px;
+margin:0 auto 28px;
+padding:7px;
+border-radius:50%;
+position:relative;
+
+background:
+linear-gradient(
+135deg,
+#ff2935,
+#330307,
+#e50914,
+#111,
+#ff2935
+);
+
+box-shadow:
+0 0 0 2px #111,
+0 0 25px rgba(229,9,20,.5),
+0 0 70px rgba(229,9,20,.18);
+
+animation:ceoGlow 3s ease-in-out infinite;
+}
+
+.ceo-image-wrap:before{
+content:"";
+position:absolute;
+inset:-8px;
+border-radius:50%;
+border:2px solid rgba(229,9,20,.4);
+animation:rotateBorder 7s linear infinite;
+}
+
+.ceo-image-wrap:after{
+content:"";
+position:absolute;
+inset:-18px;
+border-radius:50%;
+border:1px solid rgba(229,9,20,.12);
+}
+
+.ceo-image-wrap img{
+width:100%;
+height:100%;
+object-fit:cover;
+border-radius:50%;
+display:block;
+border:4px solid #090909;
+position:relative;
+z-index:2;
+}
+
+@keyframes ceoGlow{
+0%,100%{
+box-shadow:
+0 0 0 2px #111,
+0 0 25px rgba(229,9,20,.45),
+0 0 70px rgba(229,9,20,.12);
+}
+
+50%{
+box-shadow:
+0 0 0 2px #111,
+0 0 40px rgba(229,9,20,.8),
+0 0 100px rgba(229,9,20,.25);
+}
+}
+
+@keyframes rotateBorder{
+from{
+transform:rotate(0deg);
+}
+to{
+transform:rotate(360deg);
+}
+}
+
+.ceo-top h2{
+font-size:42px;
+margin-bottom:8px;
+}
+
+.ceo-top h2 span{
+color:var(--red);
+}
+
+.ceo-top p{
+max-width:650px;
+margin:0 auto 25px;
+color:#888;
+line-height:1.8;
+}
+
+.ceo-badge{
+display:inline-block;
+padding:10px 18px;
+border:1px solid #481014;
+background:#110707;
+color:#ddd;
+border-radius:30px;
+font-size:11px;
+letter-spacing:2px;
+}
+
+/* ================= ABOUT ================= */
+
+.about{
+background:#090909;
+}
+
+.about-grid{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:60px;
+align-items:center;
+}
+
+.about-photo{
+height:500px;
+border-radius:14px;
+
+background:
+linear-gradient(
+0deg,
+rgba(0,0,0,.8),
+transparent 60%
+),
 url("https://images.unsplash.com/photo-1565610222536-ef125c59da2e?auto=format&fit=crop&w=1100&q=75")
 center/cover;
-border:1px solid var(--line)
-}
-.about h3{font-size:40px;margin:10px 0 20px}
-.about h3 span{color:var(--red)}
-.about p{color:#999;line-height:1.9;margin-bottom:15px}
-.features{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:25px}
-.features div{background:#111;border:1px solid #222;padding:14px;border-radius:6px;font-size:13px}
-.features b{color:var(--red)}
 
-/* SERVICES */
-.services{background:#050505}
-.service-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+border:2px solid #252525;
+
+box-shadow:
+0 15px 40px rgba(0,0,0,.6),
+0 0 30px rgba(229,9,20,.08);
+
+position:relative;
+overflow:hidden;
+}
+
+.about-photo:after{
+content:"";
+position:absolute;
+inset:0;
+border:2px solid rgba(229,9,20,.25);
+border-radius:14px;
+pointer-events:none;
+}
+
+.about h3{
+font-size:40px;
+margin:10px 0 20px;
+}
+
+.about h3 span{
+color:var(--red);
+}
+
+.about p{
+color:#999;
+line-height:1.9;
+margin-bottom:15px;
+}
+
+.features{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:12px;
+margin-top:25px;
+}
+
+.features div{
+background:#111;
+border:1px solid #222;
+padding:14px;
+border-radius:6px;
+font-size:13px;
+}
+
+.features b{
+color:var(--red);
+}
+
+/* ================= SERVICES ================= */
+
+.services{
+background:#050505;
+}
+
+.service-grid{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:18px;
+}
+
 .card{
-padding:30px;background:linear-gradient(145deg,#151515,#0b0b0b);
-border:1px solid var(--line);border-radius:10px;
-min-height:225px;transition:.35s
+padding:30px;
+background:linear-gradient(145deg,#151515,#0b0b0b);
+border:1px solid var(--line);
+border-radius:10px;
+min-height:225px;
+transition:.35s;
+box-shadow:0 10px 25px rgba(0,0,0,.25);
 }
-.card:hover{transform:translateY(-8px);border-color:#9c1118}
-.icon{font-size:38px;margin-bottom:20px}
-.card h3{font-size:20px;margin-bottom:10px}
-.card p{color:#888;line-height:1.7;font-size:14px}
 
-/* PRODUCTS */
-.products{background:#0d0d0d}
-.product-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.card:hover{
+transform:translateY(-8px);
+border-color:#9c1118;
+box-shadow:
+0 15px 35px rgba(0,0,0,.6),
+0 0 20px rgba(229,9,20,.08);
+}
+
+.icon{
+font-size:38px;
+margin-bottom:20px;
+}
+
+.card h3{
+font-size:20px;
+margin-bottom:10px;
+}
+
+.card p{
+color:#888;
+line-height:1.7;
+font-size:14px;
+}
+
+/* ================= PRODUCTS ================= */
+
+.products{
+background:#0d0d0d;
+}
+
+.product-grid{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:20px;
+}
+
 .product{
-height:360px;position:relative;border-radius:12px;overflow:hidden;
-background-size:cover;background-position:center;
-border:1px solid var(--line);transition:.4s
-}
-.product:hover{transform:scale(1.02)}
-.product:nth-child(1){
-background-image:url("https://images.unsplash.com/photo-1581094794329-c8112a89af12?auto=format&fit=crop&w=900&q=70")
-}
-.product:nth-child(2){
-background-image:url("https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?auto=format&fit=crop&w=900&q=70")
-}
-.product:nth-child(3){
-background-image:url("https://images.unsplash.com/photo-1565793298595-6a879b1d9492?auto=format&fit=crop&w=900&q=70")
-}
-.product:after{
-content:"";position:absolute;inset:0;
-background:linear-gradient(transparent 30%,rgba(0,0,0,.95))
-}
-.product-info{position:absolute;z-index:2;bottom:22px;left:22px}
-.product-info small{color:#ff4b54;letter-spacing:2px}
-.product-info h3{font-size:25px;margin:6px 0}
-.product-info p{color:#aaa;font-size:13px}
+height:360px;
+position:relative;
+border-radius:12px;
+overflow:hidden;
 
-/* STATS */
+background-size:cover;
+background-position:center;
+
+border:2px solid #292929;
+
+transition:.4s;
+
+box-shadow:
+0 15px 35px rgba(0,0,0,.5),
+0 0 25px rgba(229,9,20,.06);
+}
+
+.product:hover{
+transform:scale(1.02);
+border-color:#8f1118;
+box-shadow:
+0 20px 45px rgba(0,0,0,.7),
+0 0 35px rgba(229,9,20,.12);
+}
+
+.product:nth-child(1){
+background-image:url("https://images.unsplash.com/photo-1581094794329-c8112a89af12?auto=format&fit=crop&w=900&q=70");
+}
+
+.product:nth-child(2){
+background-image:url("https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?auto=format&fit=crop&w=900&q=70");
+}
+
+.product:nth-child(3){
+background-image:url("https://images.unsplash.com/photo-1565793298595-6a879b1d9492?auto=format&fit=crop&w=900&q=70");
+}
+
+.product:after{
+content:"";
+position:absolute;
+inset:0;
+background:
+linear-gradient(
+transparent 30%,
+rgba(0,0,0,.95)
+);
+}
+
+.product-info{
+position:absolute;
+z-index:2;
+bottom:22px;
+left:22px;
+}
+
+.product-info small{
+color:#ff4b54;
+letter-spacing:2px;
+}
+
+.product-info h3{
+font-size:25px;
+margin:6px 0;
+}
+
+.product-info p{
+color:#aaa;
+font-size:13px;
+}
+
+/* ================= STATS ================= */
+
 .stats{
 padding:70px 0;
+
 background:
-linear-gradient(90deg,rgba(120,0,0,.9),rgba(229,9,20,.7)),
+linear-gradient(
+90deg,
+rgba(120,0,0,.9),
+rgba(229,9,20,.7)
+),
 url("https://images.unsplash.com/photo-1567789884554-0b844b597180?auto=format&fit=crop&w=1800&q=70")
-center/cover
+center/cover;
 }
-.stats-grid{display:grid;grid-template-columns:repeat(4,1fr);text-align:center}
-.stat{padding:15px;border-right:1px solid rgba(255,255,255,.25)}
-.stat:last-child{border:0}
-.stat strong{font-size:45px;display:block}
-.stat span{font-size:11px;letter-spacing:2px;text-transform:uppercase}
 
-/* CEO */
-.ceo{background:#050505}
+.stats-grid{
+display:grid;
+grid-template-columns:repeat(4,1fr);
+text-align:center;
+}
+
+.stat{
+padding:15px;
+border-right:1px solid rgba(255,255,255,.25);
+}
+
+.stat:last-child{
+border:0;
+}
+
+.stat strong{
+font-size:45px;
+display:block;
+}
+
+.stat span{
+font-size:11px;
+letter-spacing:2px;
+text-transform:uppercase;
+}
+
+/* ================= CEO SECTION ================= */
+
+.ceo{
+background:#050505;
+}
+
 .ceo-card{
-display:grid;grid-template-columns:390px 1fr;
-background:#111;border:1px solid var(--line);border-radius:15px;overflow:hidden
+display:grid;
+grid-template-columns:390px 1fr;
+background:#111;
+border:2px solid #242424;
+border-radius:15px;
+overflow:hidden;
+
+box-shadow:
+0 20px 50px rgba(0,0,0,.5),
+0 0 35px rgba(229,9,20,.06);
 }
-.ceo-photo{height:500px;background:#090909}
-.ceo-photo img{width:100%;height:100%;object-fit:cover}
-.ceo-info{padding:60px;display:flex;flex-direction:column;justify-content:center}
-.ceo-info small{color:var(--red);letter-spacing:3px;font-weight:bold}
-.ceo-info h2{font-size:55px;margin:8px 0}
-.ceo-info h2 span{color:var(--red)}
-.role{color:#666;letter-spacing:2px;font-size:12px;margin-bottom:25px}
-.ceo-info p{color:#999;line-height:1.9;max-width:650px}
-.points{display:flex;gap:9px;flex-wrap:wrap;margin:25px 0}
-.points span{background:#181818;border:1px solid #292929;padding:9px 13px;border-radius:5px;font-size:12px}
 
-/* WHY */
-.why{background:#0c0c0c}
-.why-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
-.why-card{text-align:center;background:#111;border:1px solid var(--line);padding:28px 18px;border-radius:9px}
-.why-card .emoji{font-size:35px;margin-bottom:13px}
-.why-card h3{margin-bottom:7px}
-.why-card p{color:#777;font-size:13px;line-height:1.6}
-
-/* TESTIMONIALS */
-.testimonials{background:#050505}
-.testimonial-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
-.testimonial{background:#111;border:1px solid var(--line);padding:30px;border-radius:9px}
-.quote{font-size:45px;color:var(--red);line-height:1}
-.stars{color:#ffc107;margin:10px 0;letter-spacing:2px}
-.testimonial p{color:#999;line-height:1.8;font-size:14px}
-.client{border-top:1px solid #222;margin-top:20px;padding-top:15px}
-.client span{display:block;color:#666;font-size:11px;margin-top:4px}
-
-/* CONTACT */
-.contact{background:#0a0a0a}
-.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px}
-.contact-box{background:#111;border:1px solid var(--line);padding:35px;border-radius:10px}
-.contact-box h3{font-size:25px;margin-bottom:20px}
-.contact-item{display:flex;gap:15px;padding:15px 0;border-bottom:1px solid #222}
-.contact-item:last-of-type{border:0}
-.contact-icon{font-size:22px}
-.contact-item strong{display:block;font-size:13px}
-.contact-item span,.contact-item a{color:#888;font-size:13px}
-input,textarea{
-width:100%;background:#080808;border:1px solid #292929;
-color:white;padding:14px;margin-bottom:13px;border-radius:5px;outline:none
+.ceo-photo{
+height:500px;
+background:#090909;
+padding:8px;
 }
-textarea{height:125px;resize:none;font-family:inherit}
-input:focus,textarea:focus{border-color:var(--red)}
 
-/* WHATSAPP */
+.ceo-photo img{
+width:100%;
+height:100%;
+object-fit:cover;
+
+border-radius:10px;
+
+border:3px solid #8c1118;
+
+box-shadow:
+inset 0 0 30px rgba(229,9,20,.25),
+0 0 25px rgba(229,9,20,.12);
+}
+
+.ceo-info{
+padding:60px;
+display:flex;
+flex-direction:column;
+justify-content:center;
+}
+
+.ceo-info small{
+color:var(--red);
+letter-spacing:3px;
+font-weight:bold;
+}
+
+.ceo-info h2{
+font-size:55px;
+margin:8px 0;
+}
+
+.ceo-info h2 span{
+color:var(--red);
+}
+
+.role{
+color:#666;
+letter-spacing:2px;
+font-size:12px;
+margin-bottom:25px;
+}
+
+.ceo-info p{
+color:#999;
+line-height:1.9;
+max-width:650px;
+}
+
+.points{
+display:flex;
+gap:9px;
+flex-wrap:wrap;
+margin:25px 0;
+}
+
+.points span{
+background:#181818;
+border:1px solid #292929;
+padding:9px 13px;
+border-radius:5px;
+font-size:12px;
+}
+
+/* ================= WHY ================= */
+
+.why{
+background:#0c0c0c;
+}
+
+.why-grid{
+display:grid;
+grid-template-columns:repeat(4,1fr);
+gap:18px;
+}
+
+.why-card{
+text-align:center;
+background:#111;
+border:1px solid var(--line);
+padding:28px 18px;
+border-radius:9px;
+transition:.3s;
+}
+
+.why-card:hover{
+transform:translateY(-6px);
+border-color:#7d1016;
+}
+
+.why-card .emoji{
+font-size:35px;
+margin-bottom:13px;
+}
+
+.why-card h3{
+margin-bottom:7px;
+}
+
+.why-card p{
+color:#777;
+font-size:13px;
+line-height:1.6;
+}
+
+/* ================= TESTIMONIALS ================= */
+
+.testimonials{
+background:#050505;
+}
+
+.testimonial-grid{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:18px;
+}
+
+.testimonial{
+background:#111;
+border:1px solid var(--line);
+padding:30px;
+border-radius:9px;
+}
+
+.quote{
+font-size:45px;
+color:var(--red);
+line-height:1;
+}
+
+.stars{
+color:#ffc107;
+margin:10px 0;
+letter-spacing:2px;
+}
+
+.testimonial p{
+color:#999;
+line-height:1.8;
+font-size:14px;
+}
+
+.client{
+border-top:1px solid #222;
+margin-top:20px;
+padding-top:15px;
+}
+
+.client span{
+display:block;
+color:#666;
+font-size:11px;
+margin-top:4px;
+}
+
+/* ================= CONTACT ================= */
+
+.contact{
+background:#0a0a0a;
+}
+
+.contact-grid{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:20px;
+}
+
+.contact-box{
+background:#111;
+border:1px solid var(--line);
+padding:35px;
+border-radius:10px;
+}
+
+.contact-box h3{
+font-size:25px;
+margin-bottom:20px;
+}
+
+.contact-item{
+display:flex;
+gap:15px;
+padding:15px 0;
+border-bottom:1px solid #222;
+}
+
+.contact-item:last-of-type{
+border:0;
+}
+
+.contact-icon{
+font-size:22px;
+}
+
+.contact-item strong{
+display:block;
+font-size:13px;
+}
+
+.contact-item span,
+.contact-item a{
+color:#888;
+font-size:13px;
+}
+
+input,
+textarea{
+width:100%;
+background:#080808;
+border:1px solid #292929;
+color:white;
+padding:14px;
+margin-bottom:13px;
+border-radius:5px;
+outline:none;
+}
+
+textarea{
+height:125px;
+resize:none;
+font-family:inherit;
+}
+
+input:focus,
+textarea:focus{
+border-color:var(--red);
+box-shadow:0 0 10px rgba(229,9,20,.08);
+}
+
+/* ================= WHATSAPP ================= */
+
 .whatsapp{
-position:fixed;right:20px;bottom:20px;width:60px;height:60px;
-background:#25D366;border-radius:50%;display:flex;
-align-items:center;justify-content:center;z-index:3000;
-box-shadow:0 8px 25px #000
+position:fixed;
+right:20px;
+bottom:20px;
+width:60px;
+height:60px;
+background:#25D366;
+border-radius:50%;
+display:flex;
+align-items:center;
+justify-content:center;
+z-index:3000;
+box-shadow:0 8px 25px #000;
+transition:.3s;
 }
-.whatsapp svg{width:29px;fill:white}
 
-/* FOOTER */
-footer{background:#030303;border-top:1px solid #222;padding:50px 0 20px}
-.footer-grid{display:grid;grid-template-columns:1.5fr 1fr 1fr;gap:40px;padding-bottom:35px}
-.footer-brand h2{font-size:24px;letter-spacing:2px}
-.footer-brand h2 span{color:var(--red)}
-.footer-brand p{color:#666;line-height:1.8;font-size:13px;margin-top:12px}
-footer h4{margin-bottom:15px}
-footer ul{list-style:none}
-footer li{color:#666;font-size:13px;margin:9px 0}
-footer li a:hover{color:var(--red)}
-.copyright{border-top:1px solid #181818;padding-top:20px;text-align:center;color:#555;font-size:12px}
+.whatsapp:hover{
+transform:scale(1.1);
+}
 
-/* MOBILE */
+.whatsapp svg{
+width:29px;
+fill:white;
+}
+
+/* ================= FOOTER ================= */
+
+footer{
+background:#030303;
+border-top:1px solid #222;
+padding:50px 0 20px;
+}
+
+.footer-grid{
+display:grid;
+grid-template-columns:1.5fr 1fr 1fr;
+gap:40px;
+padding-bottom:35px;
+}
+
+.footer-brand h2{
+font-size:24px;
+letter-spacing:2px;
+}
+
+.footer-brand h2 span{
+color:var(--red);
+}
+
+.footer-brand p{
+color:#666;
+line-height:1.8;
+font-size:13px;
+margin-top:12px;
+}
+
+footer h4{
+margin-bottom:15px;
+}
+
+footer ul{
+list-style:none;
+}
+
+footer li{
+color:#666;
+font-size:13px;
+margin:9px 0;
+}
+
+footer li a:hover{
+color:var(--red);
+}
+
+.copyright{
+border-top:1px solid #181818;
+padding-top:20px;
+text-align:center;
+color:#555;
+font-size:12px;
+}
+
+/* ================= MOBILE ================= */
+
 @media(max-width:900px){
-nav{display:none;position:absolute;top:72px;left:0;width:100%;background:#080808;padding:22px;flex-direction:column;align-items:flex-start;gap:18px}
-nav.active{display:flex}
-.menu{display:block}
-.about-grid,.ceo-card,.contact-grid{grid-template-columns:1fr}
-.service-grid,.product-grid,.testimonial-grid{grid-template-columns:1fr 1fr}
-.why-grid{grid-template-columns:1fr 1fr}
-.stats-grid{grid-template-columns:1fr 1fr}
-.stat{border-right:0;border-bottom:1px solid rgba(255,255,255,.2)}
-.ceo-photo{height:480px}
-.ceo-info{padding:45px 30px}
-.footer-grid{grid-template-columns:1fr 1fr}
+
+nav{
+display:none;
+position:absolute;
+top:72px;
+left:0;
+width:100%;
+background:#080808;
+padding:22px;
+flex-direction:column;
+align-items:flex-start;
+gap:18px;
+}
+
+nav.active{
+display:flex;
+}
+
+.menu{
+display:block;
+}
+
+.about-grid,
+.ceo-card,
+.contact-grid{
+grid-template-columns:1fr;
+}
+
+.service-grid,
+.product-grid,
+.testimonial-grid{
+grid-template-columns:1fr 1fr;
+}
+
+.why-grid{
+grid-template-columns:1fr 1fr;
+}
+
+.stats-grid{
+grid-template-columns:1fr 1fr;
+}
+
+.stat{
+border-right:0;
+border-bottom:1px solid rgba(255,255,255,.2);
+}
+
+.ceo-photo{
+height:480px;
+}
+
+.ceo-info{
+padding:45px 30px;
+}
+
 }
 
 @media(max-width:600px){
-section{padding:70px 0}
-.container{width:92%}
-.hero h1{font-size:51px;letter-spacing:-2px}
-.hero p{font-size:15px}
-.hero-stats{gap:25px;flex-wrap:wrap;margin-top:40px}
-.heading h2{font-size:34px}
-.about-grid,.service-grid,.product-grid,.testimonial-grid,.why-grid,.contact-grid{grid-template-columns:1fr}
-.about-photo{height:330px}
-.features{grid-template-columns:1fr}
-.product{height:320px}
-.stat strong{font-size:34px}
-.ceo-photo{height:400px}
-.ceo-info{padding:35px 22px}
-.ceo-info h2{font-size:42px}
-.footer-grid{grid-template-columns:1fr}
-.whatsapp{width:55px;height:55px;right:15px;bottom:15px}
+
+section{
+padding:70px 0;
 }
+
+.container{
+width:92%;
+}
+
+.top-slider{
+height:34px;
+}
+
+header{
+top:34px;
+}
+
+.navbar{
+height:68px;
+}
+
+.hero{
+padding-top:135px;
+}
+
+.hero h1{
+font-size:51px;
+letter-spacing:-2px;
+}
+
+.hero p{
+font-size:15px;
+}
+
+.hero-stats{
+gap:25px;
+flex-wrap:wrap;
+margin-top:40px;
+}
+
+.heading h2{
+font-size:34px;
+}
+
+.ceo-top{
+padding-top:80px;
+}
+
+.ceo-image-wrap{
+width:220px;
+height:220px;
+}
+
+.ceo-top h2{
+font-size:34px;
+}
+
+.about-grid,
+.service-grid,
+.product-grid,
+.testimonial-grid,
+.why-grid,
+.contact-grid{
+grid-template-columns:1fr;
+}
+
+.about-photo{
+height:330px;
+}
+
+.features{
+grid-template-columns:1fr;
+}
+
+.product{
+height:320px;
+}
+
+.stat strong{
+font-size:34px;
+}
+
+.ceo-photo{
+height:400px;
+}
+
+.ceo-info{
+padding:35px 22px;
+}
+
+.ceo-info h2{
+font-size:42px;
+}
+
+.footer-grid{
+grid-template-columns:1fr;
+}
+
+.whatsapp{
+width:55px;
+height:55px;
+right:15px;
+bottom:15px;
+}
+
+}
+
 </style>
 </head>
 
 <body>
 
+<!-- ================= BUSINESS SLIDER ================= -->
+
+<div class="top-slider">
+
+<div class="slider-track">
+
+<span>WELCOME TO <b>HANIFE INDUSTRY</b></span>
+
+<span>PREMIUM INDUSTRIAL SOLUTIONS</span>
+
+<span>QUALITY • RELIABILITY • INNOVATION</span>
+
+<span>BUSINESS INQUIRIES — CONTACT <b>CEO ALI</b></span>
+
+<span>HANIFE INDUSTRY — BUILDING THE FUTURE</span>
+
+<span>WELCOME TO <b>HANIFE INDUSTRY</b></span>
+
+<span>PREMIUM INDUSTRIAL SOLUTIONS</span>
+
+<span>QUALITY • RELIABILITY • INNOVATION</span>
+
+</div>
+
+</div>
+
+
+<!-- ================= HEADER ================= -->
+
 <header>
+
 <div class="container navbar">
 
 <a href="#home" class="logo">
+
 HANIFE <span>INDUSTRY</span>
+
 <small>INDUSTRIAL SOLUTIONS</small>
+
 </a>
 
 <div class="menu" onclick="toggleMenu()">☰</div>
 
 <nav id="nav">
+
 <a href="#home">HOME</a>
+
 <a href="#about">ABOUT</a>
+
 <a href="#services">SERVICES</a>
+
 <a href="#products">PRODUCTS</a>
+
 <a href="#ceo">CEO</a>
+
 <a href="#contact" class="nav-btn">CONTACT</a>
+
 </nav>
 
 </div>
+
 </header>
 
 
+<!-- ================= HERO ================= -->
+
 <section class="hero" id="home">
+
 <div class="container hero-content">
 
 <div class="tag">
+
 <span class="dot"></span>
+
 PREMIUM INDUSTRIAL SOLUTIONS
+
 </div>
 
 <h1>
+
 BUILDING<br>
+
 <span>THE FUTURE.</span>
+
 </h1>
 
 <p>
+
 HANIFE INDUSTRY provides professional industrial solutions
 with a focus on quality, reliability, innovation and long-term
 business relationships.
+
 </p>
 
 <div class="buttons">
-<a href="#services" class="btn red">EXPLORE SERVICES →</a>
 
-<a href="https://wa.me/923220751456?text=Hello%20HANIFE%20INDUSTRY%2C%20I%20want%20to%20know%20more%20about%20your%20services."
-target="_blank" class="btn outline">
-💬 WHATSAPP
+<a href="#services" class="btn red">
+
+EXPLORE SERVICES →
+
 </a>
+
+<a
+href="https://wa.me/923220751456?text=Hello%20HANIFE%20INDUSTRY%2C%20I%20want%20to%20know%20more%20about%20your%20services."
+target="_blank"
+class="btn outline">
+
+💬 WHATSAPP
+
+</a>
+
 </div>
 
 <div class="hero-stats">
-<div><strong>2026</strong><span>Business Vision</span></div>
-<div><strong>24/7</strong><span>Support</span></div>
-<div><strong>100%</strong><span>Commitment</span></div>
+
+<div>
+<strong>2026</strong>
+<span>Business Vision</span>
+</div>
+
+<div>
+<strong>24/7</strong>
+<span>Support</span>
+</div>
+
+<div>
+<strong>100%</strong>
+<span>Commitment</span>
 </div>
 
 </div>
+
+</div>
+
 </section>
 
 
+<!-- ================= CEO TOP ================= -->
+
+<section class="ceo-top">
+
+<div class="container">
+
+<div class="ceo-top-label">
+
+LEADERSHIP • HANIFE INDUSTRY
+
+</div>
+
+<div class="ceo-image-wrap">
+
+<img
+src="ali11.png"
+alt="CEO ALI - HANIFE INDUSTRY"
+loading="eager"
+>
+
+</div>
+
+<h2>
+
+CEO <span>ALI</span>
+
+</h2>
+
+<p>
+
+Chief Executive Officer of HANIFE INDUSTRY —
+leading with professionalism, quality, innovation and trust.
+
+</p>
+
+<div class="ceo-badge">
+
+CHIEF EXECUTIVE OFFICER • HANIFE INDUSTRY
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- ================= ABOUT ================= -->
+
 <section class="about" id="about">
+
 <div class="container">
 
 <div class="heading">
+
 <small>ABOUT COMPANY</small>
-<h2>Built On <span style="color:#e50914">Quality.</span></h2>
-<p>Professional industrial vision focused on trust, performance and sustainable growth.</p>
+
+<h2>
+
+Built On <span style="color:#e50914">Quality.</span>
+
+</h2>
+
+<p>
+
+Professional industrial vision focused on trust,
+performance and sustainable growth.
+
+</p>
+
 </div>
 
 <div class="about-grid">
@@ -334,390 +1412,137 @@ target="_blank" class="btn outline">
 <div class="about-photo"></div>
 
 <div>
-<small style="color:#e50914;letter-spacing:2px;font-weight:bold">WHO WE ARE</small>
+
+<small
+style="color:#e50914;letter-spacing:2px;font-weight:bold">
+
+WHO WE ARE
+
+</small>
 
 <h3>
+
 Industry With A <span>Vision.</span>
+
 </h3>
 
 <p>
+
 HANIFE INDUSTRY is a professional business focused on modern
 industrial products, services and solutions. Our mission is to
 deliver dependable services while building strong and lasting
 relationships with our customers.
+
 </p>
 
 <p>
+
 We combine professionalism, quality, innovation and customer
 satisfaction to create long-term business value.
+
 </p>
 
 <div class="features">
+
 <div><b>✓</b> Professional Management</div>
+
 <div><b>✓</b> Quality Focus</div>
+
 <div><b>✓</b> Reliable Solutions</div>
+
 <div><b>✓</b> Customer Satisfaction</div>
-</div>
+
 </div>
 
 </div>
+
 </div>
+
+</div>
+
 </section>
 
 
+<!-- ================= SERVICES ================= -->
+
 <section class="services" id="services">
+
 <div class="container">
 
 <div class="heading">
+
 <small>WHAT WE DO</small>
-<h2>Our <span style="color:#e50914">Services</span></h2>
-<p>Professional solutions designed for modern industrial and commercial requirements.</p>
+
+<h2>
+
+Our <span style="color:#e50914">Services</span>
+
+</h2>
+
+<p>
+
+Professional solutions designed for modern industrial
+and commercial requirements.
+
+</p>
+
 </div>
 
 <div class="service-grid">
 
 <div class="card">
+
 <div class="icon">⚙️</div>
+
 <h3>Industrial Solutions</h3>
-<p>Modern and reliable solutions for industrial and commercial requirements.</p>
+
+<p>
+
+Modern and reliable solutions for industrial
+and commercial requirements.
+
+</p>
+
 </div>
 
+
 <div class="card">
+
 <div class="icon">🏭</div>
+
 <h3>Industry Support</h3>
-<p>Professional support designed around business performance and operational needs.</p>
+
+<p>
+
+Professional support designed around business
+performance and operational needs.
+
+</p>
+
 </div>
 
+
 <div class="card">
+
 <div class="icon">🔧</div>
+
 <h3>Technical Services</h3>
-<p>Reliable technical assistance and maintenance solutions.</p>
+
+<p>
+
+Reliable technical assistance and maintenance solutions.
+
+</p>
+
 </div>
 
+
 <div class="card">
+
 <div class="icon">📦</div>
+
 <h3>Product Supply</h3>
-<p>Industrial product supply with a focus on reliability and professional service.</p>
-</div>
-
-<div class="card">
-<div class="icon">📊</div>
-<h3>Business Solutions</h3>
-<p>Smart business-focused solutions designed to improve performance and growth.</p>
-</div>
-
-<div class="card">
-<div class="icon">⭐</div>
-<h3>Quality Assurance</h3>
-<p>A quality-driven approach focused on customer satisfaction.</p>
-</div>
-
-</div>
-</div>
-</section>
-
-
-<section class="products" id="products">
-<div class="container">
-
-<div class="heading">
-<small>OUR PORTFOLIO</small>
-<h2>Industrial <span style="color:#e50914">World</span></h2>
-<p>Modern industrial environments, machinery and production solutions.</p>
-</div>
-
-<div class="product-grid">
-
-<div class="product">
-<div class="product-info">
-<small>01 / SOLUTIONS</small>
-<h3>Industrial Equipment</h3>
-<p>Professional industrial solutions.</p>
-</div>
-</div>
-
-<div class="product">
-<div class="product-info">
-<small>02 / TECHNOLOGY</small>
-<h3>Modern Machinery</h3>
-<p>Technology-focused industrial performance.</p>
-</div>
-</div>
-
-<div class="product">
-<div class="product-info">
-<small>03 / PRODUCTION</small>
-<h3>Production Solutions</h3>
-<p>Quality-driven production environments.</p>
-</div>
-</div>
-
-</div>
-</div>
-</section>
-
-
-<section class="stats">
-<div class="container">
-<div class="stats-grid">
-
-<div class="stat">
-<strong>2026</strong>
-<span>Business Vision</span>
-</div>
-
-<div class="stat">
-<strong>100%</strong>
-<span>Commitment</span>
-</div>
-
-<div class="stat">
-<strong>24/7</strong>
-<span>Online Support</span>
-</div>
-
-<div class="stat">
-<strong>∞</strong>
-<span>Future Growth</span>
-</div>
-
-</div>
-</div>
-</section>
-
-
-<section class="ceo" id="ceo">
-<div class="container">
-
-<div class="heading">
-<small>LEADERSHIP</small>
-<h2>Meet Our <span style="color:#e50914">CEO</span></h2>
-<p>Professional leadership driving HANIFE INDUSTRY forward.</p>
-</div>
-
-<div class="ceo-card">
-
-<div class="ceo-photo">
-<img src="1789325881089~2.jpg" alt="CEO ALI - HANIFE INDUSTRY">
-</div>
-
-<div class="ceo-info">
-
-<small>CHIEF EXECUTIVE OFFICER</small>
-
-<h2>CEO <span>ALI</span></h2>
-
-<div class="role">HANIFE INDUSTRY</div>
 
 <p>
-CEO ALI leads HANIFE INDUSTRY with a vision focused on
-professionalism, quality, innovation and strong customer
-relationships. His goal is to develop a modern business
-platform that creates lasting value for customers and partners.
-</p>
 
-<div class="points">
-<span>✓ Leadership</span>
-<span>✓ Quality</span>
-<span>✓ Innovation</span>
-<span>✓ Trust</span>
-</div>
-
-<a href="https://wa.me/923220751456?text=Hello%20CEO%20ALI%2C%20I%20would%20like%20to%20contact%20HANIFE%20INDUSTRY."
-target="_blank" class="btn red">
-CONTACT CEO →
-</a>
-
-</div>
-</div>
-</div>
-</section>
-
-
-<section class="why">
-<div class="container">
-
-<div class="heading">
-<small>WHY HANIFE INDUSTRY</small>
-<h2>Why Choose <span style="color:#e50914">Us?</span></h2>
-</div>
-
-<div class="why-grid">
-
-<div class="why-card">
-<div class="emoji">🏆</div>
-<h3>Professional</h3>
-<p>Professional approach in every business interaction.</p>
-</div>
-
-<div class="why-card">
-<div class="emoji">⚡</div>
-<h3>Reliable</h3>
-<p>Reliable services focused on customer requirements.</p>
-</div>
-
-<div class="why-card">
-<div class="emoji">💡</div>
-<h3>Innovative</h3>
-<p>Modern ideas for a changing industrial world.</p>
-</div>
-
-<div class="why-card">
-<div class="emoji">🤝</div>
-<h3>Trusted</h3>
-<p>Relationships built on trust and respect.</p>
-</div>
-
-</div>
-</div>
-</section>
-
-
-<section class="testimonials">
-<div class="container">
-
-<div class="heading">
-<small>CLIENT EXPERIENCE</small>
-<h2>What People <span style="color:#e50914">Say</span></h2>
-</div>
-
-<div class="testimonial-grid">
-
-<div class="testimonial">
-<div class="quote">“</div>
-<div class="stars">★★★★★</div>
-<p>Professional communication and a strong commitment to quality.</p>
-<div class="client">
-<strong>Business Client</strong>
-<span>Industrial Partner</span>
-</div>
-</div>
-
-<div class="testimonial">
-<div class="quote">“</div>
-<div class="stars">★★★★★</div>
-<p>Reliable service and a professional approach from start to finish.</p>
-<div class="client">
-<strong>Industry Partner</strong>
-<span>Business Client</span>
-</div>
-</div>
-
-<div class="testimonial">
-<div class="quote">“</div>
-<div class="stars">★★★★★</div>
-<p>Strong leadership, modern vision and customer-focused management.</p>
-<div class="client">
-<strong>Satisfied Client</strong>
-<span>Business Partner</span>
-</div>
-</div>
-
-</div>
-</div>
-</section>
-
-
-<section class="contact" id="contact">
-<div class="container">
-
-<div class="heading">
-<small>CONTACT HANIFE INDUSTRY</small>
-<h2>Let's Build <span style="color:#e50914">Together.</span></h2>
-<p>Have a business inquiry? Contact HANIFE INDUSTRY directly.</p>
-</div>
-
-<div class="contact-grid">
-
-<div class="contact-box">
-
-<h3>Get In Touch</h3>
-
-<div class="contact-item">
-<div class="contact-icon">🏢</div>
-<div>
-<strong>Company</strong>
-<span>HANIFE INDUSTRY</span>
-</div>
-</div>
-
-<div class="contact-item">
-<div class="contact-icon">👨‍💼</div>
-<div>
-<strong>CEO</strong>
-<span>ALI</span>
-</div>
-</div>
-
-<div class="contact-item">
-<div class="contact-icon">📱</div>
-<div>
-<strong>WhatsApp</strong>
-<a href="https://wa.me/923220751456" target="_blank">0322 0751456</a>
-</div>
-</div>
-
-<div class="contact-item">
-<div class="contact-icon">🕐</div>
-<div>
-<strong>Support</strong>
-<span>24/7 Online Contact</span>
-</div>
-</div>
-
-<br>
-
-<a href="https://wa.me/923220751456?text=Hello%20HANIFE%20INDUSTRY%2C%20I%20am%20interested%20in%20your%20services."
-target="_blank" class="btn red">
-💬 CHAT ON WHATSAPP
-</a>
-
-</div>
-
-
-<div class="contact-box">
-
-<h3>Send A Message</h3>
-
-<input id="name" type="text" placeholder="Your Name">
-<input id="phone" type="text" placeholder="Your Phone Number">
-<textarea id="message" placeholder="Write your business message..."></textarea>
-
-<button onclick="sendMessage()" class="btn red">
-SEND MESSAGE →
-</button>
-
-</div>
-
-</div>
-</div>
-</section>
-
-
-<footer>
-<div class="container">
-
-<div class="footer-grid">
-
-<div class="footer-brand">
-<h2>HANIFE <span>INDUSTRY</span></h2>
-<p>
-Premium industrial solutions built with quality,
-professionalism, innovation and trust.
-</p>
-</div>
-
-<div>
-<h4>QUICK LINKS</h4>
-<ul>
-<li><a href="#home">Home</a></li>
-<li><a href="#about">About</a></li>
-<li><a href="#services">Services</a></li>
-<li><a href="#products">Products</a></li>
-</ul>
-</div>
-
-<div>
-<h4>CONTACT</h4>
-<ul>
-   
+Industrial product supply with a focus on re
