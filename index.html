@@ -34,7 +34,7 @@
             overflow-x: hidden;
         }
 
-        /* 1. Top Business Ticker / Sliding News Bar */
+        /* Top Business News Ticker / Sliding News Bar */
         .top-news-ticker {
             width: 100%;
             background: linear-gradient(90deg, #0f121a, #201a00, #0f121a);
@@ -88,7 +88,7 @@
             animation-play-state: paused;
         }
 
-        /* 2. Modern Header Navbar */
+        /* Navbar */
         navbar {
             position: fixed;
             top: 42px;
@@ -132,7 +132,7 @@
             text-shadow: 0 0 10px var(--primary-gold);
         }
 
-        /* 3. Hero Section & CEO Profile */
+        /* Hero Section & CEO Profile */
         .hero-section {
             min-height: 100vh;
             padding: 180px 8% 80px;
@@ -192,11 +192,11 @@
         }
 
         .btn-call:hover {
-            transform: translateY(-50px) scale(1.05);
+            transform: translateY(-3px) scale(1.03);
             box-shadow: 0 15px 40px var(--primary-gold);
         }
 
-        /* 3D Glass Card Frame for CEO */
+        /* CEO Frame */
         .ceo-3d-card {
             position: relative;
             background: var(--card-glass);
@@ -208,7 +208,7 @@
         }
 
         .ceo-3d-card:hover {
-            transform: rotateY(-5deg) rotateX(5deg) scale(1.02);
+            transform: scale(1.02);
             box-shadow: 0 35px 70px var(--neon-glow);
         }
 
@@ -220,7 +220,7 @@
             display: block;
         }
 
-        /* 4. Special Announcement Section (With 3 Given Photos) */
+        /* Announcement Section */
         .announcement-box {
             margin: 60px 8%;
             padding: 50px 5%;
@@ -256,17 +256,17 @@
             margin-bottom: 30px;
         }
 
-        .photo-gallery-3 {
+        .photo-gallery-2 {
             display: flex;
             justify-content: center;
-            gap: 25px;
+            gap: 30px;
             flex-wrap: wrap;
             margin-top: 20px;
         }
 
         .photo-frame {
-            width: 220px;
-            height: 280px;
+            width: 260px;
+            height: 320px;
             border-radius: 20px;
             overflow: hidden;
             border: 2px solid var(--card-border);
@@ -277,7 +277,7 @@
 
         .photo-frame:hover {
             border-color: var(--primary-gold);
-            transform: translateY(-8px) scale(1.05);
+            transform: translateY(-8px) scale(1.03);
             box-shadow: 0 15px 35px var(--neon-glow);
         }
 
@@ -287,7 +287,7 @@
             object-fit: cover;
         }
 
-        /* 5. Services Section */
+        /* Services Section */
         .section-header {
             text-align: center;
             margin: 80px 0 50px;
@@ -345,7 +345,7 @@
             line-height: 1.6;
         }
 
-        /* 6. 30 HD Photos Dynamic Gallery */
+        /* 30 HD Photos Gallery */
         .gallery-container {
             padding: 0 8%;
             display: grid;
@@ -372,7 +372,7 @@
             transform: scale(1.2);
         }
 
-        /* 7. Contact Section */
+        /* Contact Section */
         .contact-box {
             margin: 80px 8%;
             padding: 60px 5%;
@@ -411,7 +411,7 @@
             color: var(--primary-gold);
         }
 
-        /* Floating WhatsApp Action Button */
+        /* Floating WhatsApp Button */
         .whatsapp-float {
             position: fixed;
             bottom: 30px;
@@ -446,7 +446,6 @@
             font-size: 0.95rem;
         }
 
-        /* Mobile View Responsive */
         @media (max-width: 768px) {
             .hero-section {
                 flex-direction: column;
@@ -476,7 +475,7 @@
 </head>
 <body>
 
-    <!-- 1. Top Business News Ticker / Running Slide Bar -->
+    <!-- 1. Top Business News Ticker -->
     <div class="top-news-ticker">
         <div class="ticker-label"><i class="fas fa-bullhorn" style="margin-right: 8px;"></i> LATEST UPDATES</div>
         <div class="ticker-scroll-area">
@@ -513,12 +512,12 @@
         </div>
 
         <div class="ceo-3d-card">
-            <!-- Updated CEO Main Image -->
+            <!-- Main CEO Photo -->
             <img src="./CEO ali.jpg" alt="CEO ALI ASGHAR" class="ceo-photo" onerror="this.src='https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=800&q=80'">
         </div>
     </section>
 
-    <!-- 4. Special Announcement Section (Includes 3 Added JPG/PNG Photos) -->
+    <!-- 4. Special Announcement Section -->
     <section class="announcement-box" id="announcement">
         <div class="announcement-title">💍 Special Celebration Announcement 💍</div>
         <div class="couple-title">ALI ASGHAR ❤️ IQRA</div>
@@ -527,11 +526,8 @@
             18 تاریخ کو منگنی کی پرمسرت خوشی میں خصوصی اعلان! Hanife Industry کی پوری ٹیم کی جانب سے مبارکباد اور نیک تمناؤں کا اظہار۔
         </div>
 
-        <!-- 3 Given Photos Gallery -->
-        <div class="photo-gallery-3">
-            <div class="photo-frame">
-                <img src="./CEO ali11.jpg" alt="CEO Photo 1" onerror="this.src='https://images.unsplash.com/photo-1507679799987-c73779587ccf?auto=format&fit=crop&w=500&q=80'">
-            </div>
+        <!-- 2 Announcement Photos (Selected) -->
+        <div class="photo-gallery-2">
             <div class="photo-frame">
                 <img src="./1789325881089~2.jpg" alt="Business Event Photo" onerror="this.src='https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&w=500&q=80'">
             </div>
@@ -566,7 +562,7 @@
         </div>
     </section>
 
-    <!-- 6. 30 HD Photos Dynamic Gallery -->
+    <!-- 6. 30 HD Photos Gallery -->
     <section id="gallery">
         <div class="section-header">
             <p>PORTFOLIO</p>
@@ -609,10 +605,13 @@
     <script>
         document.getElementById('year').textContent = new Date().getFullYear();
 
-        // Array of 30 High Quality Industrial Unsplash Images
         const photoList = [
             'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=600&q=80',
             'https://images.unsplash.com/photo-1504917599217-d4dc5ebe6122?auto=format&fit=crop&w=600&q=80',
             'https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=600&q=80',
             'https://images.unsplash.com/photo-1581092335397-9583fe92d232?auto=format&fit=crop&w=600&q=80',
-         
+            'https://images.unsplash.com/photo-1565043589221-1a6fd9ae45c7?auto=format&fit=crop&w=600&q=80',
+            'https://images.unsplash.com/photo-1581092580497-e0d23cbdf1dc?auto=format&fit=crop&w=600&q=80',
+            'https://images.unsplash.com/photo-1531834685032-c34bf0d84c77?auto=format&fit=crop&w=600&q=80',
+            'https://images.unsplash.com/photo-1581093458791-9f3c3250a8b0?auto=format&fit=crop&w=600&q=80',
+            'https://images.unsplash.com/photo-1581092795360-fd1ca04f0952?auto=format&fit=cro
