@@ -1,330 +1,544 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ur" dir="ltr">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width,initial-scale=1.0">
-<meta name="theme-color" content="#080808">
-<title>HANIFE INDUSTRY | Premium Industrial Business</title>
-<style>
-:root{--g:#d4af37;--gl:#f7df83;--gd:#967515;--b:#050505;--c:#111;--c2:#181818;--w:#fff;--m:#aaa}
-*{margin:0;padding:0;box-sizing:border-box}
-html{scroll-behavior:smooth}
-body{font-family:Arial,sans-serif;background:var(--b);color:var(--w);line-height:1.6}
-a{text-decoration:none;color:inherit}
-img{max-width:100%;display:block}
-.container{width:92%;max-width:1200px;margin:auto}
-header{position:fixed;top:0;left:0;width:100%;z-index:999;background:rgba(5,5,5,.92);backdrop-filter:blur(12px);border-bottom:1px solid #333}
-.nav{height:76px;display:flex;align-items:center;justify-content:space-between}
-.logo{font-size:25px;font-weight:900;letter-spacing:2px;color:var(--g)}
-.logo span{color:white}
-nav{display:flex;gap:25px}
-nav a{font-size:14px;color:#ddd;transition:.3s}
-nav a:hover{color:var(--g)}
-.menu{display:none;font-size:28px;color:var(--g);cursor:pointer}
-.hero{min-height:100vh;padding:150px 0 80px;display:flex;align-items:center;background:linear-gradient(90deg,rgba(0,0,0,.9),rgba(0,0,0,.55)),url("https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?auto=format&fit=crop&w=2000&q=90") center/cover}
-.heroGrid{display:grid;grid-template-columns:1.15fr .85fr;gap:45px;align-items:center}
-.badge{display:inline-block;border:1px solid var(--g);color:var(--gl);padding:7px 16px;border-radius:30px;font-size:12px;letter-spacing:2px;margin-bottom:18px}
-h1{font-size:clamp(45px,7vw,88px);line-height:1;font-weight:900}
-.gold{color:var(--g)}
-.hero p{color:#ccc;font-size:18px;max-width:650px;margin:25px 0}
-.btns{display:flex;gap:12px;flex-wrap:wrap}
-.btn{display:inline-block;padding:13px 24px;border-radius:5px;border:1px solid var(--g);font-weight:bold;transition:.3s}
-.btn.primary{background:var(--g);color:#050505}
-.btn:hover{transform:translateY(-3px);box-shadow:0 10px 30px #000}
-.heroCard{background:rgba(10,10,10,.75);border:1px solid #555;padding:25px;border-radius:16px;box-shadow:0 25px 70px #000;transform:perspective(900px) rotateY(-5deg)}
-.heroCard img{width:100%;height:390px;object-fit:cover;border-radius:10px}
-.heroCard h3{margin-top:15px;color:var(--g)}
-section{padding:90px 0}
-.dark{background:#080808}
-.title{text-align:center;margin-bottom:50px}
-.title small{color:var(--g);letter-spacing:3px;font-weight:bold}
-.title h2{font-size:42px;margin:8px 0}
-.title p{color:var(--m);max-width:700px;margin:auto}
-.about{display:grid;grid-template-columns:1fr 1fr;gap:45px;align-items:center}
-.aboutImg{border-radius:15px;overflow:hidden;border:1px solid #444}
-.aboutImg img{width:100%;height:430px;object-fit:cover;transition:.6s}
-.aboutImg:hover img{transform:scale(1.05)}
-.about h2{font-size:40px;margin-bottom:18px}
-.about p{color:#bbb;margin-bottom:15px}
-.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:15px;margin-top:30px}
-.stat{background:var(--c);border:1px solid #333;padding:20px;text-align:center;border-radius:10px}
-.stat b{font-size:30px;color:var(--g);display:block}
-.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
-.card{background:linear-gradient(145deg,#171717,#0b0b0b);border:1px solid #292929;padding:28px;border-radius:14px;transition:.35s;position:relative;overflow:hidden}
-.card:before{content:"";position:absolute;top:0;left:0;width:45px;height:2px;background:var(--g)}
-.card:hover{transform:translateY(-8px) perspective(800px) rotateX(2deg);border-color:var(--g);box-shadow:0 20px 45px #000}
-.icon{font-size:35px;margin-bottom:15px}
-.card h3{color:var(--gl);margin-bottom:10px}
-.card p{color:#aaa;font-size:14px}
-.ceo{display:grid;grid-template-columns:.75fr 1.25fr;gap:50px;align-items:center}
-.ceoImg{border:1px solid var(--g);padding:8px;border-radius:15px;background:#111}
-.ceoImg img{height:430px;width:100%;object-fit:cover;border-radius:10px}
-.ceo h2{font-size:45px}
-.ceo h4{color:var(--g);font-size:18px;margin:5px 0 20px}
-.ceo p{color:#bbb;margin-bottom:15px}
-.quote{border-left:3px solid var(--g);padding:15px 20px;background:#111;margin-top:20px;color:#ddd}
-.team{display:grid;grid-template-columns:1fr 1fr;gap:30px}
-.person{display:flex;gap:20px;align-items:center;background:#111;padding:20px;border:1px solid #333;border-radius:12px}
-.person img{width:130px;height:150px;object-fit:cover;border-radius:8px;border:1px solid var(--g)}
-.person h3{color:var(--gl)}
-.person p{color:#aaa}
-.plan{border:1px solid #333;text-align:center;padding:30px;border-radius:15px;background:#111}
-.plan.featured{border-color:var(--g);transform:scale(1.03)}
-.plan h3{color:var(--g);font-size:22px}
-.plan strong{display:block;font-size:35px;margin:15px}
-.plan li{list-style:none;color:#bbb;padding:5px}
-.workflow{counter-reset:item}
-.step{display:grid;grid-template-columns:80px 1fr;gap:20px;align-items:center;padding:20px;border-bottom:1px solid #292929}
-.step b{width:60px;height:60px;border:1px solid var(--g);border-radius:50%;display:grid;place-items:center;color:var(--g);font-size:20px}
-.step h3{color:var(--gl)}
-.step p{color:#aaa}
-.gallery{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}
-.gallery img{width:100%;height:210px;object-fit:cover;border-radius:8px;border:1px solid #222;transition:.35s}
-.gallery img:hover{transform:scale(1.04);border-color:var(--g)}
-.faq{max-width:850px;margin:auto}
-details{background:#111;border:1px solid #292929;margin:10px 0;border-radius:8px;padding:17px}
-summary{cursor:pointer;color:var(--gl);font-weight:bold}
-details p{color:#aaa;padding-top:12px}
-.contact{display:grid;grid-template-columns:1fr 1fr;gap:30px}
-.contactBox{background:#111;border:1px solid #333;border-radius:15px;padding:30px}
-.contactBox h3{color:var(--g);font-size:25px;margin-bottom:15px}
-.contactItem{padding:13px 0;border-bottom:1px solid #292929;color:#ccc}
-.contactItem b{color:white}
-.form input,.form textarea{width:100%;background:#080808;border:1px solid #333;color:#fff;padding:14px;margin-bottom:12px;border-radius:6px;font:inherit}
-.form textarea{height:130px;resize:vertical}
-.cta{text-align:center;background:linear-gradient(135deg,#17130a,#080808);border-top:1px solid #493d18;border-bottom:1px solid #493d18}
-.cta h2{font-size:45px}
-footer{background:#030303;border-top:1px solid #222;padding:35px 0;text-align:center;color:#888}
-footer strong{color:var(--g)}
-.float{position:fixed;right:20px;bottom:20px;width:58px;height:58px;border-radius:50%;background:#25d366;color:#fff;display:grid;place-items:center;font-size:27px;z-index:998;box-shadow:0 5px 25px #000}
-.top{position:fixed;right:20px;bottom:90px;width:40px;height:40px;border:1px solid var(--g);color:var(--g);background:#111;border-radius:50%;display:grid;place-items:center;z-index:997;cursor:pointer}
-.reveal{opacity:0;transform:translateY(25px);transition:.7s}
-.reveal.show{opacity:1;transform:none}
-@media(max-width:850px){
-nav{display:none;position:absolute;top:76px;left:0;width:100%;background:#080808;flex-direction:column;padding:20px;gap:16px;border-bottom:1px solid #333}
-nav.open{display:flex}.menu{display:block}.heroGrid,.about,.ceo,.contact{grid-template-columns:1fr}.heroCard{transform:none}.grid{grid-template-columns:1fr 1fr}.gallery{grid-template-columns:1fr 1fr}.team{grid-template-columns:1fr}.stats{grid-template-columns:1fr 1fr}
-}
-@media(max-width:520px){
-section{padding:65px 0}.hero{padding-top:120px}.heroCard img{height:280px}h1{font-size:48px}.title h2,.about h2,.cta h2,.ceo h2{font-size:32px}.grid,.gallery{grid-template-columns:1fr}.stats{grid-template-columns:1fr 1fr}.person{align-items:flex-start}.person img{width:95px;height:115px}
-}
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hanife Industry | Official Website</title>
+    
+    <!-- FontAwesome Icons & Google Fonts -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&family=Noto+Nastaliq+Urdu:wght@400;700&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --primary-gold: #ffd700;
+            --secondary-gold: #ffae00;
+            --dark-royal: #0a0b10;
+            --card-bg: rgba(255, 255, 255, 0.05);
+            --border-glow: rgba(255, 215, 0, 0.3);
+            --text-color: #f0f0f0;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background-color: var(--dark-royal);
+            color: var(--text-color);
+            overflow-x: hidden;
+            position: relative;
+        }
+
+        /* Dynamic 3D Background */
+        .bg-royal-3d {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            z-index: -1;
+            background: radial-gradient(circle at 50% 50%, #1a1c29 0%, #0a0b10 100%);
+            overflow: hidden;
+        }
+
+        .gold-orb {
+            position: absolute;
+            width: 350px;
+            height: 350px;
+            border-radius: 50%;
+            background: radial-gradient(circle, rgba(255,215,0,0.15) 0%, rgba(0,0,0,0) 70%);
+            filter: blur(40px);
+            animation: floatOrb 12s infinite alternate ease-in-out;
+        }
+
+        .orb-1 { top: -50px; left: -50px; }
+        .orb-2 { bottom: -100px; right: -50px; animation-delay: -6s; }
+
+        @keyframes floatOrb {
+            0% { transform: translate(0, 0) scale(1); }
+            100% { transform: translate(100px, 80px) scale(1.2); }
+        }
+
+        /* Glassmorphism 3D Cards */
+        .glass-card {
+            background: rgba(20, 24, 40, 0.6);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border: 1px solid rgba(255, 215, 0, 0.2);
+            border-radius: 20px;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5), inset 0 0 15px rgba(255, 215, 0, 0.05);
+            transition: all 0.4s ease;
+        }
+
+        .glass-card:hover {
+            transform: translateY(-8px) scale(1.02);
+            border-color: var(--primary-gold);
+            box-shadow: 0 20px 40px rgba(255, 215, 0, 0.2);
+        }
+
+        /* Navigation Bar */
+        navbar {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            padding: 20px 8%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 1000;
+            background: rgba(10, 11, 16, 0.85);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid var(--border-glow);
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: 800;
+            background: linear-gradient(45deg, #fff, var(--primary-gold));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 25px;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: 500;
+            transition: 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: var(--primary-gold);
+        }
+
+        /* Hero / CEO Section */
+        .hero {
+            min-height: 100vh;
+            padding: 140px 8% 60px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 40px;
+        }
+
+        .hero-content {
+            max-width: 600px;
+        }
+
+        .hero-content h3 {
+            color: var(--primary-gold);
+            font-size: 1.2rem;
+            letter-spacing: 2px;
+            margin-bottom: 10px;
+        }
+
+        .hero-content h1 {
+            font-size: 3.2rem;
+            line-height: 1.2;
+            margin-bottom: 20px;
+            background: linear-gradient(to right, #fff, #d4af37);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .hero-content p {
+            color: #ccc;
+            font-size: 1.1rem;
+            margin-bottom: 30px;
+            line-height: 1.6;
+        }
+
+        .btn-gold {
+            display: inline-block;
+            padding: 14px 35px;
+            background: linear-gradient(45deg, var(--secondary-gold), var(--primary-gold));
+            color: #000;
+            font-weight: 700;
+            border-radius: 50px;
+            text-decoration: none;
+            box-shadow: 0 10px 25px rgba(255, 215, 0, 0.3);
+            transition: 0.3s;
+        }
+
+        .btn-gold:hover {
+            transform: scale(1.05);
+            box-shadow: 0 15px 30px rgba(255, 215, 0, 0.5);
+        }
+
+        /* CEO Royal Border Frame */
+        .ceo-frame-wrapper {
+            position: relative;
+            padding: 12px;
+            border-radius: 25px;
+            background: linear-gradient(145deg, var(--primary-gold), transparent, var(--secondary-gold));
+            box-shadow: 0 20px 50px rgba(0,0,0,0.8);
+        }
+
+        .ceo-img {
+            width: 320px;
+            height: 400px;
+            object-fit: cover;
+            border-radius: 18px;
+            display: block;
+        }
+
+        /* Headings */
+        .section-title {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .section-title h2 {
+            font-size: 2.5rem;
+            color: #fff;
+            position: relative;
+            display: inline-block;
+        }
+
+        .section-title h2::after {
+            content: '';
+            position: absolute;
+            width: 60%;
+            height: 3px;
+            background: var(--primary-gold);
+            bottom: -10px;
+            left: 20%;
+        }
+
+        /* Engagement Announcement Section */
+        .engagement-section {
+            padding: 60px 8%;
+            margin: 40px auto;
+            max-width: 1000px;
+            text-align: center;
+            background: linear-gradient(135deg, rgba(255, 215, 0, 0.1), rgba(255, 105, 180, 0.1));
+            border: 2px solid var(--primary-gold);
+        }
+
+        .urdu-text {
+            font-family: 'Noto Nastaliq Urdu', serif;
+            line-height: 2.2;
+            direction: rtl;
+        }
+
+        .couple-names {
+            font-size: 2.8rem;
+            font-weight: 800;
+            color: var(--primary-gold);
+            margin: 15px 0;
+            text-shadow: 0 0 20px rgba(255, 215, 0, 0.4);
+        }
+
+        /* Services Grid */
+        .services-section {
+            padding: 80px 8%;
+        }
+
+        .grid-3 {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+        }
+
+        .service-box {
+            padding: 30px;
+            text-align: center;
+        }
+
+        .service-box i {
+            font-size: 2.5rem;
+            color: var(--primary-gold);
+            margin-bottom: 20px;
+        }
+
+        /* Gallery Grid */
+        .gallery-section {
+            padding: 80px 8%;
+        }
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+            gap: 20px;
+        }
+
+        .gallery-item {
+            height: 220px;
+            overflow: hidden;
+            border-radius: 15px;
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: 0.5s ease;
+        }
+
+        .gallery-item:hover img {
+            transform: scale(1.15);
+        }
+
+        /* Contact Section */
+        .contact-section {
+            padding: 80px 8%;
+            text-align: center;
+        }
+
+        .contact-details {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            flex-wrap: wrap;
+            margin-top: 30px;
+        }
+
+        .contact-card {
+            padding: 20px 35px;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            font-size: 1.2rem;
+        }
+
+        .contact-card i {
+            color: var(--primary-gold);
+            font-size: 1.8rem;
+        }
+
+        /* Floating WhatsApp Button */
+        .whatsapp-float {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 60px;
+            height: 60px;
+            background-color: #25d366;
+            color: #FFF;
+            border-radius: 50px;
+            text-align: center;
+            font-size: 30px;
+            box-shadow: 0 10px 25px rgba(37, 211, 102, 0.4);
+            z-index: 1000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            transition: 0.3s;
+        }
+
+        .whatsapp-float:hover {
+            transform: scale(1.1);
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 25px;
+            background: #050508;
+            border-top: 1px solid rgba(255, 215, 0, 0.1);
+            color: #888;
+        }
+
+        /* Responsive Settings for Mobile */
+        @media (max-width: 768px) {
+            .hero {
+                flex-direction: column;
+                text-align: center;
+                padding-top: 120px;
+            }
+
+            .hero-content h1 {
+                font-size: 2.3rem;
+            }
+
+            .nav-links {
+                display: none;
+            }
+
+            .ceo-img {
+                width: 100%;
+                max-width: 280px;
+                height: 350px;
+            }
+
+            .couple-names {
+                font-size: 2rem;
+            }
+        }
+    </style>
 </head>
 <body>
 
-<header>
-<div class="container nav">
-<a class="logo" href="#home">HANIFE <span>INDUSTRY</span></a>
-<div class="menu" onclick="document.querySelector('nav').classList.toggle('open')">☰</div>
-<nav>
-<a href="#home">Home</a><a href="#about">About</a><a href="#business">Business</a><a href="#services">Services</a><a href="#projects">Projects</a><a href="#gallery">Gallery</a><a href="#contact">Contact</a>
-</nav>
-</div>
-</header>
+    <!-- Dynamic 3D Royal Background -->
+    <div class="bg-royal-3d">
+        <div class="gold-orb orb-1"></div>
+        <div class="gold-orb orb-2"></div>
+    </div>
 
-<main id="home">
-<section class="hero">
-<div class="container heroGrid">
-<div class="reveal">
-<span class="badge">PREMIUM INDUSTRIAL BUSINESS</span>
-<h1>HANIFE<br><span class="gold">INDUSTRY</span></h1>
-<p>Building modern industrial solutions with professional management, quality-focused operations and a vision for sustainable business growth.</p>
-<div class="btns"><a class="btn primary" href="#contact">Contact Us</a><a class="btn" href="https://wa.me/923220751456">WhatsApp</a></div>
-</div>
-<div class="heroCard reveal">
-<img src="1789325881089~2.jpg" alt="Hanife Industry">
-<h3>Quality • Vision • Growth</h3>
-<p>Professional industrial business solutions.</p>
-</div>
-</div>
-</section>
+    <!-- Navigation Header -->
+    <navbar>
+        <div class="logo">Hanife Industry</div>
+        <ul class="nav-links">
+            <li><a href="#ceo">CEO</a></li>
+            <li><a href="#engagement">Announcement</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#gallery">Gallery</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </navbar>
 
-<section id="about">
-<div class="container about reveal">
-<div class="aboutImg"><img src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?auto=format&fit=crop&w=1000&q=85" alt="Industry"></div>
-<div>
-<div class="title" style="text-align:left;margin-bottom:20px"><small>ABOUT HANIFE</small><h2>Designed For <span class="gold">Growth</span></h2></div>
-<p>HANIFE INDUSTRY represents a modern business vision focused on industrial development, professional services, quality systems and long-term partnerships.</p>
-<p>Our approach combines smart planning, efficient operations, technology and customer-focused solutions to create strong business value.</p>
-<div class="stats"><div class="stat"><b>01</b>Vision</div><div class="stat"><b>24/7</b>Focus</div><div class="stat"><b>100%</b>Commitment</div><div class="stat"><b>∞</b>Growth</div></div>
-</div>
-</div>
-</section>
+    <!-- Hero / CEO Section -->
+    <section class="hero" id="ceo">
+        <div class="hero-content">
+            <h3>WELCOME TO HANIFE INDUSTRY</h3>
+            <h1>Excellence & Industrial Leadership</h1>
+            <p>Under the leadership of CEO ALI ASGHAR, Hanife Industry is committed to providing top-quality industrial solutions.</p>
+            <a href="https://wa.me/923220751456" class="btn-gold" target="_blank"><i class="fab fa-whatsapp"></i> Contact CEO Directly</a>
+        </div>
 
-<section id="ceo" class="dark">
-<div class="container ceo reveal">
-<div class="ceoImg"><img src="CEO ali11.png" alt="CEO ALI ASGHAR"></div>
-<div>
-<small class="gold">LEADERSHIP</small>
-<h2>ALI ASGHAR</h2>
-<h4>CHIEF EXECUTIVE OFFICER — HANIFE INDUSTRY</h4>
-<p>A strong business begins with a clear vision, disciplined management and commitment to quality. HANIFE INDUSTRY is designed around these principles.</p>
-<p>Our objective is to develop a professional industrial platform capable of creating reliable solutions and meaningful long-term business relationships.</p>
-<div class="quote">“Vision creates direction. Quality creates trust. Consistency creates growth.”</div>
-</div>
-</div>
-</section>
+        <div class="ceo-frame-wrapper">
+            <!-- CEO ali11.jpg updated here -->
+            <img src="./CEO ali11.jpg" alt="CEO ALI ASGHAR" class="ceo-img" onerror="this.src='https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=800&q=80'">
+        </div>
+    </section>
 
-<section>
-<div class="container">
-<div class="title"><small>TEAM</small><h2>Professional <span class="gold">Leadership</span></h2><p>People and ideas behind the HANIFE INDUSTRY vision.</p></div>
-<div class="team reveal">
-<div class="person"><img src="IQRA Ali.png" alt="IQRA ALI"><div><h3>IQRA ALI</h3><p>Business & Management Team</p><p>Supporting professional planning, coordination and organizational development.</p></div></div>
-<div class="person"><img src="CEO ali11.png" alt="ALI ASGHAR"><div><h3>ALI ASGHAR</h3><p>Chief Executive Officer</p><p>Strategic vision, business leadership and long-term development.</p></div></div>
-</div>
-</div>
-</section>
+    <!-- Engagement Announcement Section -->
+    <section class="engagement-section glass-card" id="engagement">
+        <h2 style="color: #fff; font-size: 2rem; margin-bottom: 10px;">💍 Special Announcement 💍</h2>
+        <div class="couple-names">ALI ASGHAR ❤️ IQRA</div>
+        <div class="urdu-text" style="font-size: 1.3rem; color: #f0f0f0;">
+            18 تاریخ کو منگنی کی خوشی میں خصوصی اعلان اور Hanife Industry کی جانب سے تمام احباب کے لیے نیک تمناؤں کا اظہار!
+        </div>
+        
+        <div style="display: flex; justify-content: center; gap: 20px; margin-top: 25px; flex-wrap: wrap;">
+            <!-- Updated images linked here -->
+            <img src="./1789325881089~2.jpg" alt="Business CEO" style="width: 170px; height: 170px; object-fit: cover; border-radius: 15px; border: 2px solid var(--primary-gold);" onerror="this.src='https://images.unsplash.com/photo-1507679799987-c73779587ccf?auto=format&fit=crop&w=400&q=80'">
+            <img src="./IQRA Ali.png" alt="Engagement Announcement" style="width: 170px; height: 170px; object-fit: cover; border-radius: 15px; border: 2px solid var(--primary-gold);" onerror="this.src='https://images.unsplash.com/photo-1515934751635-c81c6bc9a2d8?auto=format&fit=crop&w=400&q=80'">
+        </div>
+    </section>
 
-<section id="business" class="dark">
-<div class="container">
-<div class="title"><small>OUR BUSINESS</small><h2>Business <span class="gold">Divisions</span></h2><p>Flexible areas designed for a modern industrial business platform.</p></div>
-<div class="grid reveal" id="businessGrid"></div>
-</div>
-</section>
+    <!-- Services Section -->
+    <section class="services-section" id="services">
+        <div class="section-title">
+            <h2>Our Services</h2>
+        </div>
+        <div class="grid-3">
+            <div class="glass-card service-box">
+                <i class="fas fa-industry"></i>
+                <h3>Industrial Manufacturing</h3>
+                <p>High-precision manufacturing with advanced technologies tailored to custom specifications.</p>
+            </div>
+            <div class="glass-card service-box">
+                <i class="fas fa-shield-alt"></i>
+                <h3>Quality Assurance</h3>
+                <p>Ensuring maximum efficiency, international quality compliance, and unmatched standards.</p>
+            </div>
+            <div class="glass-card service-box">
+                <i class="fas fa-truck-loading"></i>
+                <h3>Supply Chain & Distribution</h3>
+                <p>Seamless logistics and global distribution management for high-demand operations.</p>
+            </div>
+        </div>
+    </section>
 
-<section id="services">
-<div class="container">
-<div class="title"><small>CAPABILITIES</small><h2>Our <span class="gold">Services</span></h2></div>
-<div class="grid reveal" id="serviceGrid"></div>
-</div>
-</section>
+    <!-- Industrial Photo Gallery (30 Photos) -->
+    <section class="gallery-section" id="gallery">
+        <div class="section-title">
+            <h2>Industrial Gallery</h2>
+        </div>
+        <div class="gallery-grid" id="industrialGallery"></div>
+    </section>
 
-<section class="dark">
-<div class="container">
-<div class="title"><small>BUSINESS PLANS</small><h2>Growth <span class="gold">Packages</span></h2></div>
-<div class="grid reveal">
-<div class="plan"><h3>STARTER</h3><strong>SMART</strong><ul><li>Business Planning</li><li>Basic Operations</li><li>Digital Presence</li><li>Professional Support</li></ul></div>
-<div class="plan featured"><h3>PROFESSIONAL</h3><strong>GROW</strong><ul><li>Advanced Planning</li><li>Operations Strategy</li><li>Market Development</li><li>Business Support</li></ul></div>
-<div class="plan"><h3>ENTERPRISE</h3><strong>VISION</strong><ul><li>Strategic Development</li><li>Industrial Solutions</li><li>Expansion Planning</li><li>Dedicated Coordination</li></ul></div>
-</div>
-</div>
-</section>
+    <!-- Contact Section -->
+    <section class="contact-section" id="contact">
+        <div class="section-title">
+            <h2>Get In Touch</h2>
+        </div>
+        <p>Reach out to CEO ALI ASGHAR or our management team for inquiries.</p>
+        
+        <div class="contact-details">
+            <div class="glass-card contact-card">
+                <i class="fab fa-whatsapp"></i>
+                <span>+92 322 0751456</span>
+            </div>
+            <div class="glass-card contact-card">
+                <i class="fas fa-building"></i>
+                <span>Hanife Industry</span>
+            </div>
+        </div>
+    </section>
 
-<section>
-<div class="container">
-<div class="title"><small>INDUSTRIES</small><h2>Areas We <span class="gold">Serve</span></h2></div>
-<div class="grid reveal" id="industryGrid"></div>
-</div>
-</section>
+    <!-- WhatsApp Floating Action Button -->
+    <a href="https://wa.me/923220751456" class="whatsapp-float" target="_blank" title="Chat on WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
 
-<section id="projects" class="dark">
-<div class="container">
-<div class="title"><small>WORKFLOW</small><h2>From Idea To <span class="gold">Execution</span></h2></div>
-<div class="workflow reveal">
-<div class="step"><b>01</b><div><h3>Consultation</h3><p>Understand business requirements, objectives and opportunities.</p></div></div>
-<div class="step"><b>02</b><div><h3>Planning</h3><p>Create a practical strategy based on resources and business goals.</p></div></div>
-<div class="step"><b>03</b><div><h3>Development</h3><p>Build and coordinate the required business or industrial solution.</p></div></div>
-<div class="step"><b>04</b><div><h3>Quality Review</h3><p>Review processes, standards and expected outcomes.</p></div></div>
-<div class="step"><b>05</b><div><h3>Growth</h3><p>Improve operations and prepare the business for future expansion.</p></div></div>
-</div>
-</div>
-</section>
+    <!-- Footer -->
+    <footer>
+        <p>&copy; <span id="currentYear"></span> Hanife Industry. CEO ALI ASGHAR. All Rights Reserved.</p>
+    </footer>
 
-<section>
-<div class="container">
-<div class="title"><small>QUALITY & SAFETY</small><h2>Built Around <span class="gold">Trust</span></h2></div>
-<div class="grid reveal">
-<div class="card"><div class="icon">◆</div><h3>Quality Focus</h3><p>Quality-conscious planning and professional execution.</p></div>
-<div class="card"><div class="icon">◈</div><h3>Safety Mindset</h3><p>Responsible processes with safety and reliability in mind.</p></div>
-<div class="card"><div class="icon">◇</div><h3>Continuous Improvement</h3><p>Constantly improving systems, communication and performance.</p></div>
-</div>
-</div>
-</section>
+    <!-- JavaScript Loader -->
+    <script>
+        // Automatic Year script
+        document.getElementById('currentYear').textContent = new Date().getFullYear();
 
-<section id="gallery" class="dark">
-<div class="container">
-<div class="title"><small>VISUAL PORTFOLIO</small><h2>Industry <span class="gold">Gallery</span></h2><p>Representative industrial and business visuals.</p></div>
-<div class="gallery reveal" id="galleryGrid"></div>
-</div>
-</section>
+        // 30 High Quality Industrial Photo Links
+        const industrialImages = [
+            'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=600&q=80',
+            'https://images.unsplash.com/photo-1504917599217-d4dc5ebe6122?auto=format&fit=crop&w=600&q=80',
+            'https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=600&q=80',
+            'https://images.unsplash.com/photo-1581092335397-9583fe92d232?auto=format&fit=crop&w=600&q=80',
+            'https://images.unsplash.com/photo-1565043589221-1a6fd9ae45c7?auto=format&fit=crop&w=600&q=80',
+            'https://images.unsplash.com/photo-1581092580497-e0d23cbdf1dc?auto=format&fit=crop&w=600&q=80',
+            'https://images.unsplash.com/photo-1531834685032-c34bf0d84c77?auto=format&fit=crop&w=600&q=80',
+            'https://images.unsplash.com/photo-1581093458791-9f3c3250a8b0?auto=format&fit=crop&w=600&q=80',
+            'https://images.unsplash.com/photo-1581092795360-fd1ca04f0952?auto=format&fit=crop&w=600&q=80',
+            'https://images.unsplash.com/photo-1581091870621-02e0d37e3d8e?auto=format&fit=crop&w=600&q=80',
+            'https://images.unsplash.com/photo-1581092162384-8987c1d64718?auto=format&fit=crop&w=600&q=80',
+            'https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=600&q=80',
+            'https://images.unsplash.com/photo-1581092334651-ddf26d9a09d0?auto=format&fit=crop&w=600&q=80',
+            'https://images.unsplash.com/photo-1581092580497-e0d23cbdf1dc?auto=format&fit=crop&w=600&q=80',
+            'https://images.unsplash.com/photo-1513828583688-c52646db42da?auto=format&fit=crop&w=600&q=80',
+            'https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=600&q=80',
+            'https://images.unsplash.com/photo-1581092335397-9583fe92d232?auto=format&fit=crop&w=600&q=80',
+            'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=600&q=80',
+            'https://images.unsplash.com/photo-1504917599217-d4dc5ebe6122?auto=format&fit=crop&w=600&q=80',
+            'https://images.unsplash.com/photo-1565043589221-1a6fd9ae45c7?auto=format&fit=crop&w=600&q=80',
+            'https://images.unsplash.com/photo-1581093458791-9f3c3250a8b0?auto=format&fit=crop&w=600&q=80',
+            'https://images.unsplash.com/photo-1531834685032-c34bf0d84c77?auto=format&fit=crop&w=600&q=80',
+            'https://images.unsplash.com/photo-1581092795360-fd1ca04f0952?auto=format&fit=crop&w=600&q=80',
+            'https://images.unsplash.com/photo-1581091870621-02e0d37e3d8e?auto=format&fit=crop&w=600&q=80',
+            'https://images.unsplash.com/photo-1581092162384-8987c1d64718?auto=format&fit=crop&w=600&q=80',
+            'https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=600&q=80',
+            'https://images.unsplash.com/photo-1581092334651-ddf26d9a09d0?auto=format&fit=crop&w=600&q=80',
+            'https://images.unsplash.com/photo-1513828583688-c52646db42da?auto=format&fit=crop&w=600&q=80',
+            'https://images.unsplash.com/photo-1581092580497-e0d23cbdf1dc?auto=format&fit=crop&w=600&q=80',
+            'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=600&q=80'
+        ];
 
-<section>
-<div class="container">
-<div class="title"><small>FAQ</small><h2>Frequently Asked <span class="gold">Questions</span></h2></div>
-<div class="faq reveal">
-<details><summary>What is HANIFE INDUSTRY?</summary><p>HANIFE INDUSTRY is a premium business concept focused on industrial solutions, professional services and long-term growth.</p></details>
-<details><summary>How can I contact the company?</summary><p>You can contact HANIFE INDUSTRY directly through phone or WhatsApp at 03220751456.</p></details>
-<details><summary>Can I discuss a business project?</summary><p>Yes. Send your requirements through WhatsApp and the business team can review your project needs.</p></details>
-<details><summary>Does the website work on mobile?</summary><p>Yes. The design is responsive and optimized for mobile, tablet and desktop screens.</p></details>
-</div>
-</div>
-</section>
-
-<section class="cta">
-<div class="container reveal">
-<h2>Let's Build Something <span class="gold">Better</span></h2>
-<p style="color:#aaa;margin:15px auto 25px;max-width:650px">Connect with HANIFE INDUSTRY for professional business discussions and future opportunities.</p>
-<a class="btn primary" href="https://wa.me/923220751456?text=Hello%20HANIFE%20INDUSTRY%2C%20I%20want%20to%20discuss%20a%20business%20project.">Start A Conversation</a>
-</div>
-</section>
-
-<section id="contact" class="dark">
-<div class="container">
-<div class="title"><small>GET IN TOUCH</small><h2>Contact <span class="gold">HANIFE INDUSTRY</span></h2></div>
-<div class="contact reveal">
-<div class="contactBox">
-<h3>Business Office</h3>
-<div class="contactItem"><b>CEO:</b> ALI ASGHAR</div>
-<div class="contactItem"><b>Company:</b> HANIFE INDUSTRY</div>
-<div class="contactItem"><b>Phone:</b> <a href="tel:+923220751456">03220751456</a></div>
-<div class="contactItem"><b>WhatsApp:</b> <a href="https://wa.me/923220751456">Chat With Us</a></div>
-<div class="contactItem"><b>Email:</b> Contact through WhatsApp for business inquiries.</div>
-</div>
-<div class="contactBox form">
-<h3>Send Inquiry</h3>
-<input id="name" placeholder="Your Name">
-<input id="phone" placeholder="Your Phone">
-<textarea id="msg" placeholder="Tell us about your business requirement"></textarea>
-<button class="btn primary" style="width:100%;cursor:pointer" onclick="sendMsg()">Send On WhatsApp</button>
-</div>
-</div>
-</div>
-</section>
-</main>
-
-<footer>
-<div class="container">
-<p><strong>HANIFE INDUSTRY</strong></p>
-<p>Premium Industrial Business Platform</p>
-<p>CEO: ALI ASGHAR | WhatsApp: 03220751456</p>
-<p>© <span id="year"></span> HANIFE INDUSTRY. All Rights Reserved.</p>
-</div>
-</footer>
-
-<a class="float" href="https://wa.me/923220751456" aria-label="WhatsApp">◉</a>
-<div class="top" onclick="scrollTo(0,0)">↑</div>
-
-<script>
-const imgs=[
-"1581094794329-c8112a89af12","1565610222536-ef125c59da2e","1581092160607-ee22621dd758","1504917595217-d4dc5ebe6122","1537462715879-360eeb61a0ad",
-"1581092919535-7146ff1a5900","1581093458791-9d42e3c3f8c7","1581091226825-a6a2a5aee158","1565793298595-6a879b1d9492","1497435334941-8c899ee9e8e9",
-"1504307651254-35680f356dfd","1586528116493-da8b8f0f2b8f","1586528116311-ad8dd3c8310d","1565008447742-97f6f38c985c","1567789884554-0b844b597180",
-"1578575437130-527eed3abbec","1586864387967-d02ef85d93e8","1509390144018-eeaf65052242","1473341304170-971dccb5ac1e","1558618666-fcd25c85cd64",
-"1497366811353-6870744d04b2","1497366216548-37526070297c","1497366754035-f200968a6e72","1524758631624-e2822e304c36","1556761175-b413da4baf72",
-"1556761175-5973dc0f32e7","1551836022-d5d88e9218df","1553877522-43269d4ea984","1552664730-d307ca884978","1556761175-4b46a572b786"
-];
-document.getElementById("galleryGrid").innerHTML=imgs.map((x,i)=>`<img loading="lazy" src="https://images.unsplash.com/photo-${x}?auto=format&fit=crop&w=1000&q=85" alt="HANIFE Industry ${i+1}">`).join("");
-
-const business=[
-["⚙️","Industrial Solutions","Modern solutions for industrial operations and business development."],
-["🏭","Manufacturing","Professional manufacturing concepts, planning and operational support."],
-["📦","Supply & Trading","Business supply, sourcing and trading coordination."],
-["🏗️","Construction","Project planning and professional construction-related solutions."],
-["🚚","Logistics","Movement, supply-chain planning and operational coordination."],
-["💻","Technology","Digital systems and technology-focused business solutions."],
-["⚡","Energy Solutions","Energy-related planning, efficiency and development concepts."],
-["🌐","Business Development","Market strategy, partnerships and future expansion planning."],
-["📊","Consultancy","Professional business analysis and strategic guidance."]
-];
-document.getElementById("businessGrid").innerHTML=business.map(x=>`<div class="card"><div class="icon">${x[0]}</div><h3>${x[1]}</h3><p>${x[2]}</p></div>`).join("");
-
-const services=[
-["01","Business Consulting","Planning, analysis and practical business strategy."],
-["02","Project Management","Structured planning, coordination and execution."],
-["03","Industrial Planning","Operational concepts designed around efficiency and quality."],
-["04","Procurement Support","Sourcing and supplier coordination for business requirements."],
-["05","Market Strategy","Growth opportunities, positioning and development planning."],
-["06","Digital Solutions","Modern online and technology-based business solutions."]
-];
-document.getElementById("serviceGrid").innerHTML=services.map(x=>`<div class="card"><div class="icon">${x[0]}</div><h3>${x[1]}</h3><p>${x[2]}</p></div>`).join("");
-
-const industries=["Manufacturing","Construction","Logistics","Energy","Trading","Technology","Real Est
+        // Populate Industrial Gallery
+        const galleryContainer = document.getElementById('industrialGallery');
+        industrialImages.forEach((imgUrl, idx) => {
+            const item = document.createElement('div');
+            item.className = 'gallery-item glass-card';
+            item.innerHTML = `<img src="${imgUrl}" alt="Industrial Photo ${idx + 1}" loading="lazy">`;
+            galleryContainer.appendChild(item);
+        });
+    </script>
+</body>
+</html>
+w
