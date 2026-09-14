@@ -3,7 +3,6 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 <title>HANIFE INDUSTRY | Premium Industrial Solutions</title>
 
 <style>
@@ -16,9 +15,10 @@
 
 body{
     font-family:Arial,Helvetica,sans-serif;
-    background:#050607;
+    background:#030405;
     color:#fff;
-    line-height:1.6;
+    line-height:1.5;
+    overflow-x:hidden;
 }
 
 a{
@@ -32,44 +32,52 @@ a{
     margin:auto;
 }
 
-/* TOP BAR */
+/* ================= TOP BAR ================= */
+
 .topbar{
+    height:27px;
     background:#000;
-    border-bottom:1px solid #b88a16;
-    color:#ddd;
-    font-size:11px;
+    border-bottom:1px solid #d4a72c;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    color:#aaa;
+    font-size:9px;
     letter-spacing:1px;
-    padding:7px 0;
-    text-align:center;
+    white-space:nowrap;
+    overflow:hidden;
 }
 
-.topbar span{
+.topbar b{
     color:#f5c542;
-    font-weight:bold;
-    margin:0 8px;
+    margin:0 9px;
 }
 
-/* HEADER */
+/* ================= HEADER ================= */
+
 header{
+    height:64px;
     position:sticky;
     top:0;
-    z-index:1000;
-    background:rgba(5,6,7,.96);
-    border-bottom:1px solid #222;
-    backdrop-filter:blur(12px);
+    z-index:999;
+    background:rgba(3,5,6,.92);
+    border-bottom:1px solid #242424;
+    backdrop-filter:blur(15px);
+    box-shadow:0 5px 25px rgba(0,0,0,.6);
 }
 
 .nav{
-    min-height:65px;
+    height:100%;
     display:flex;
     align-items:center;
     justify-content:space-between;
 }
 
 .logo{
-    font-size:21px;
+    font-size:19px;
     font-weight:900;
     letter-spacing:1px;
+    text-shadow:0 0 15px rgba(245,197,66,.2);
 }
 
 .logo span{
@@ -78,63 +86,69 @@ header{
 
 .logo small{
     display:block;
-    font-size:7px;
+    color:#777;
+    font-size:6px;
     letter-spacing:3px;
-    color:#aaa;
     text-align:center;
 }
 
 .menu{
-    display:flex;
-    gap:28px;
     list-style:none;
+    display:flex;
+    gap:27px;
 }
 
 .menu a{
-    font-size:12px;
+    font-size:10px;
     font-weight:bold;
-    color:#eee;
     transition:.3s;
 }
 
 .menu a:hover{
     color:#f5c542;
+    text-shadow:0 0 12px #f5c542;
 }
 
 .menu-btn{
     display:none;
-    font-size:25px;
+    font-size:26px;
     color:#f5c542;
     cursor:pointer;
 }
 
-/* HERO */
+/* ================= HERO ================= */
+
 .hero{
-    min-height:590px;
+    min-height:565px;
+    position:relative;
     display:flex;
     align-items:center;
-    position:relative;
     overflow:hidden;
+
     background:
-    radial-gradient(circle at 80% 35%,rgba(245,197,66,.18),transparent 25%),
-    linear-gradient(115deg,#030303 25%,#111 65%,#18120a);
+    linear-gradient(90deg,
+        rgba(0,0,0,.98) 5%,
+        rgba(0,0,0,.90) 35%,
+        rgba(0,0,0,.35) 75%,
+        rgba(0,0,0,.55)),
+    url("https://images.unsplash.com/photo-1581094794329-c8112a89af12?auto=format&fit=crop&w=2000&q=90")
+    center/cover no-repeat;
 }
 
 .hero:after{
     content:"";
     position:absolute;
-    right:-100px;
-    top:0;
-    width:55%;
-    height:100%;
-    background:
-    linear-gradient(135deg,transparent 30%,rgba(245,197,66,.08)),
-    repeating-linear-gradient(
-        90deg,
-        transparent 0 55px,
-        rgba(255,255,255,.035) 56px 58px
+    right:-15%;
+    top:-20%;
+    width:60%;
+    height:150%;
+    background:linear-gradient(
+        135deg,
+        transparent 25%,
+        rgba(245,197,66,.08),
+        transparent 70%
     );
-    transform:skewX(-12deg);
+    transform:rotate(8deg);
 }
 
 .hero-content{
@@ -145,244 +159,389 @@ header{
 
 .badge{
     display:inline-block;
-    border:1px solid #e5b936;
+    padding:7px 14px;
+    border:1px solid #f5c542;
+    border-radius:5px;
     color:#f5c542;
-    padding:7px 13px;
-    border-radius:4px;
-    font-size:10px;
+    font-size:9px;
     font-weight:bold;
-    letter-spacing:1.5px;
-    margin-bottom:20px;
+    letter-spacing:1.7px;
+    box-shadow:
+        0 0 10px rgba(245,197,66,.15),
+        inset 0 0 10px rgba(245,197,66,.05);
 }
 
 .hero h1{
-    font-size:clamp(48px,8vw,86px);
-    line-height:.9;
-    font-weight:900;
-    letter-spacing:-3px;
+    margin-top:20px;
+    font-size:clamp(55px,8vw,88px);
+    line-height:.85;
+    letter-spacing:-4px;
+    text-shadow:
+        3px 3px 0 #111,
+        0 0 30px rgba(255,255,255,.08);
 }
 
 .hero h1 span{
     color:#f5c542;
+    text-shadow:
+        3px 3px 0 #5b4300,
+        0 0 25px rgba(245,197,66,.3);
 }
 
 .hero p{
-    max-width:570px;
-    margin:25px 0;
+    max-width:550px;
     color:#ccc;
-    font-size:16px;
+    font-size:14px;
+    margin:25px 0;
 }
 
 .buttons{
     display:flex;
-    gap:14px;
+    gap:13px;
     flex-wrap:wrap;
 }
 
 .btn{
+    display:inline-block;
     padding:14px 25px;
     border:1px solid #f5c542;
-    font-size:12px;
+    font-size:10px;
     font-weight:bold;
-    transition:.3s;
+    transition:.35s;
+    box-shadow:
+        0 7px 0 #604b0c,
+        0 12px 25px rgba(0,0,0,.5);
 }
 
 .btn-primary{
-    background:#f5c542;
-    color:#050505;
-}
-
-.btn:hover{
-    transform:translateY(-3px);
-    box-shadow:0 8px 25px rgba(245,197,66,.18);
+    background:linear-gradient(145deg,#ffe37a,#dcae25);
+    color:#090909;
 }
 
 .btn-outline{
-    background:transparent;
-    color:#fff;
+    background:rgba(0,0,0,.45);
 }
 
-/* SECTIONS */
+.btn:hover{
+    transform:translateY(-4px);
+    box-shadow:
+        0 11px 0 #604b0c,
+        0 18px 35px rgba(0,0,0,.7),
+        0 0 20px rgba(245,197,66,.15);
+}
+
+/* ================= GENERAL ================= */
+
 section{
-    padding:75px 0;
-    border-bottom:1px solid #202020;
+    padding:48px 0;
+    border-bottom:1px solid #1d1d1d;
+    position:relative;
 }
 
-.section-label{
+.label{
     color:#f5c542;
-    font-size:10px;
+    font-size:8px;
     font-weight:bold;
     letter-spacing:2px;
-    margin-bottom:8px;
+    margin-bottom:7px;
 }
 
-.section-title{
-    font-size:36px;
-    line-height:1.1;
-    margin-bottom:15px;
+.title{
+    font-size:30px;
+    line-height:1.05;
 }
 
-.section-title span{
+.title span{
     color:#f5c542;
 }
 
-.section-text{
-    color:#aaa;
-    max-width:650px;
-}
-
-/* CEO */
-.ceo-box{
-    border:1px solid #292929;
-    background:linear-gradient(135deg,#0d0e0f,#070707);
-    padding:45px;
-    display:flex;
-    align-items:center;
-    gap:45px;
-    position:relative;
-    overflow:hidden;
-}
-
-.ceo-icon{
-    min-width:145px;
-    height:145px;
-    border:2px solid #f5c542;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    font-size:55px;
-    color:#f5c542;
-    background:#111;
-}
-
-.ceo-name{
-    font-size:34px;
-    font-weight:900;
-}
-
-.ceo-role{
-    color:#f5c542;
+.desc{
+    color:#999;
     font-size:11px;
-    font-weight:bold;
-    letter-spacing:1px;
+    max-width:650px;
+    margin-top:9px;
 }
 
-/* ABOUT */
-.about-grid{
+/* ================= 3D CEO ================= */
+
+.ceo-section{
+    padding:22px 0;
+    background:
+        radial-gradient(circle at 15% 50%,rgba(245,197,66,.06),transparent 25%);
+}
+
+.ceo{
+    display:grid;
+    grid-template-columns:195px 1fr;
+    gap:28px;
+    align-items:center;
+}
+
+.ceo-photo{
+    height:125px;
+    padding:4px;
+    border:1px solid #f5c542;
+    background:linear-gradient(145deg,#f5c542,#5e4707,#f5c542);
+    box-shadow:
+        0 12px 30px rgba(0,0,0,.8),
+        0 0 20px rgba(245,197,66,.12);
+    transform:perspective(700px) rotateY(2deg);
+}
+
+.ceo-photo img{
+    width:100%;
+    height:100%;
+    display:block;
+    object-fit:cover;
+    border:1px solid #111;
+}
+
+.ceo h2{
+    font-size:28px;
+}
+
+.role{
+    color:#f5c542;
+    font-size:9px;
+    font-weight:bold;
+}
+
+/* ================= ABOUT ================= */
+
+.about{
+    display:grid;
+    grid-template-columns:270px 1fr;
+    gap:40px;
+    align-items:center;
+}
+
+.photo-box{
+    width:270px;
+    height:205px;
+    padding:5px;
+    border:1px solid #f5c542;
+    background:linear-gradient(145deg,#f5c542,#15110a,#a77a13);
+    box-shadow:
+        12px 15px 0 rgba(245,197,66,.05),
+        0 20px 40px rgba(0,0,0,.8),
+        0 0 25px rgba(245,197,66,.08);
+    transform:perspective(900px) rotateY(-4deg);
+}
+
+.photo-box img{
+    width:100%;
+    height:100%;
+    display:block;
+    object-fit:cover;
+}
+
+.checks{
+    margin-top:18px;
     display:grid;
     grid-template-columns:1fr 1fr;
-    gap:50px;
-    align-items:center;
+    gap:9px;
 }
 
-.about-card{
-    min-height:300px;
-    border:1px solid #292929;
-    background:
-    radial-gradient(circle at center,rgba(245,197,66,.12),transparent 55%),
-    #090a0b;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    position:relative;
-}
-
-.about-card:before{
-    content:"HANIFE";
-    font-size:70px;
-    font-weight:900;
-    color:rgba(255,255,255,.025);
-}
-
-.about-list{
-    margin-top:25px;
-    display:grid;
-    gap:13px;
-}
-
-.about-list div{
+.checks div{
     color:#ddd;
-    font-size:14px;
+    font-size:10px;
 }
 
-.about-list b{
+.checks b{
     color:#f5c542;
-    margin-right:10px;
+    margin-right:7px;
 }
 
-/* CARDS */
-.business-grid{
+/* ================= BUSINESS ================= */
+
+.business-head{
+    display:grid;
+    grid-template-columns:290px 1fr;
+    gap:35px;
+    align-items:center;
+}
+
+.business-photos{
     display:grid;
     grid-template-columns:repeat(3,1fr);
-    gap:18px;
-    margin-top:35px;
+    gap:12px;
 }
 
-.card{
-    min-height:170px;
-    padding:25px;
-    border:1px solid #252525;
-    background:linear-gradient(145deg,#111,#080909);
-    transition:.35s;
+.pic{
+    height:110px;
+    position:relative;
+    overflow:hidden;
+    border:1px solid #675316;
+    border-radius:5px;
+    background:#080909;
+    box-shadow:
+        0 10px 20px rgba(0,0,0,.7),
+        inset 0 0 20px rgba(245,197,66,.05);
+    transform:perspective(800px) rotateX(1deg);
+    transition:.4s;
 }
 
-.card:hover{
+.pic:hover{
+    transform:perspective(800px) rotateX(-4deg) translateY(-5px);
     border-color:#f5c542;
-    transform:translateY(-5px);
-    box-shadow:0 15px 35px rgba(0,0,0,.5);
+    box-shadow:
+        0 18px 30px rgba(0,0,0,.8),
+        0 0 20px rgba(245,197,66,.15);
 }
 
-.card-icon{
-    font-size:32px;
-    color:#f5c542;
-    margin-bottom:15px;
+.pic img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    display:block;
+    transition:.5s;
+    filter:saturate(.9);
 }
 
-.card h3{
-    font-size:18px;
-    margin-bottom:8px;
+.pic:hover img{
+    transform:scale(1.1);
 }
 
-.card p{
-    color:#999;
-    font-size:12px;
+.pic:after{
+    content:"";
+    position:absolute;
+    inset:0;
+    background:linear-gradient(
+        transparent 35%,
+        rgba(0,0,0,.88)
+    );
 }
 
-/* SERVICES */
+.pic span{
+    position:absolute;
+    z-index:2;
+    left:10px;
+    bottom:8px;
+    font-size:9px;
+    font-weight:bold;
+}
+
+/* ================= SERVICES ================= */
+
+.services-wrap{
+    display:grid;
+    grid-template-columns:290px 1fr;
+    gap:35px;
+    align-items:center;
+}
+
 .services{
     display:grid;
     grid-template-columns:repeat(3,1fr);
     gap:1px;
-    background:#292929;
-    margin-top:35px;
+    background:#2c2c2c;
+    border:1px solid #222;
+    box-shadow:0 15px 30px rgba(0,0,0,.5);
 }
 
 .service{
-    padding:30px;
-    background:#080909;
+    min-height:95px;
+    padding:18px;
+    background:
+        linear-gradient(145deg,#111415,#070808);
+    transition:.3s;
+}
+
+.service:hover{
+    background:
+        linear-gradient(145deg,#191714,#080909);
+    box-shadow:inset 0 0 25px rgba(245,197,66,.06);
 }
 
 .service-icon{
     color:#f5c542;
-    font-size:27px;
-    margin-bottom:10px;
+    font-size:23px;
+    text-shadow:0 0 12px rgba(245,197,66,.25);
 }
 
 .service h3{
-    font-size:15px;
+    font-size:10px;
+    margin-top:5px;
 }
 
 .service p{
-    color:#888;
-    font-size:11px;
-    margin-top:7px;
+    color:#777;
+    font-size:8px;
 }
 
-/* STATS */
+/* ================= PRODUCTS ================= */
+
+.products{
+    display:grid;
+    grid-template-columns:290px 1fr;
+    gap:35px;
+    align-items:center;
+}
+
+.product-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:13px;
+}
+
+.product{
+    background:linear-gradient(145deg,#131516,#070808);
+    border:1px solid #292929;
+    overflow:hidden;
+    border-radius:4px;
+    box-shadow:
+        0 12px 25px rgba(0,0,0,.7),
+        0 1px 0 rgba(255,255,255,.03) inset;
+    transition:.35s;
+}
+
+.product:hover{
+    transform:translateY(-6px) scale(1.01);
+    border-color:#f5c542;
+    box-shadow:
+        0 20px 35px rgba(0,0,0,.8),
+        0 0 20px rgba(245,197,66,.12);
+}
+
+.product-img{
+    height:110px;
+    overflow:hidden;
+}
+
+.product-img img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    display:block;
+    transition:.5s;
+}
+
+.product:hover .product-img img{
+    transform:scale(1.08);
+}
+
+.product-info{
+    padding:12px;
+}
+
+.product h3{
+    font-size:10px;
+}
+
+.product p{
+    color:#777;
+    font-size:8px;
+    margin-top:4px;
+}
+
+/* ================= STATS ================= */
+
 .stats{
+    padding:27px 0;
     background:
-    linear-gradient(rgba(245,197,66,.07),rgba(245,197,66,.02)),
-    #080909;
+        linear-gradient(rgba(0,0,0,.72),rgba(0,0,0,.85)),
+        url("https://images.unsplash.com/photo-1565610222536-ef125c59da2e?auto=format&fit=crop&w=1800&q=90")
+        center/cover fixed;
 }
 
 .stats-grid{
@@ -392,218 +551,310 @@ section{
 }
 
 .stat{
-    padding:25px;
-    border-right:1px solid #292929;
+    border-right:1px solid #555;
 }
 
 .stat:last-child{
-    border:0;
+    border-right:0;
 }
 
 .stat strong{
     display:block;
     color:#f5c542;
-    font-size:38px;
+    font-size:30px;
+    text-shadow:0 0 15px rgba(245,197,66,.25);
 }
 
 .stat span{
-    font-size:10px;
+    font-size:8px;
     font-weight:bold;
-    letter-spacing:1px;
 }
 
-/* MISSION */
+/* ================= LEADERSHIP ================= */
+
+.leadership{
+    display:grid;
+    grid-template-columns:1fr 1.4fr;
+    gap:45px;
+    align-items:center;
+}
+
+.lead-photo{
+    width:175px;
+    height:220px;
+    padding:4px;
+    border:1px solid #f5c542;
+    background:linear-gradient(145deg,#f5c542,#111,#9b7417);
+    box-shadow:
+        12px 15px 0 rgba(245,197,66,.04),
+        0 20px 35px rgba(0,0,0,.8);
+}
+
+.lead-photo img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    display:block;
+}
+
 .mission-grid{
     display:grid;
     grid-template-columns:1fr 1fr;
-    gap:25px;
-    margin-top:30px;
+    gap:13px;
+    margin-top:18px;
 }
 
 .mission{
-    padding:35px;
-    border:1px solid #303030;
-    background:#0b0c0d;
+    padding:20px;
+    border:1px solid #333;
+    background:
+        linear-gradient(145deg,#131516,#080909);
+    box-shadow:
+        8px 8px 0 rgba(245,197,66,.025),
+        0 10px 25px rgba(0,0,0,.6);
 }
 
 .mission h3{
     color:#f5c542;
-    margin-bottom:12px;
+    font-size:13px;
+    margin-bottom:8px;
 }
 
 .mission p{
-    color:#aaa;
-    font-size:13px;
+    color:#888;
+    font-size:9px;
 }
 
-/* WHY */
+/* ================= WHY ================= */
+
 .why-grid{
     display:grid;
     grid-template-columns:repeat(5,1fr);
-    gap:15px;
-    margin-top:35px;
+    gap:10px;
+    margin-top:25px;
 }
 
 .why{
+    padding:20px 10px;
     text-align:center;
-    padding:25px 10px;
-    border-top:1px solid #f5c542;
+    border:1px solid #222;
+    background:linear-gradient(145deg,#111313,#070808);
+    box-shadow:0 10px 20px rgba(0,0,0,.45);
+    transition:.3s;
+}
+
+.why:hover{
+    transform:translateY(-5px);
+    border-color:#f5c542;
 }
 
 .why-icon{
     color:#f5c542;
-    font-size:28px;
+    font-size:25px;
 }
 
-.why h4{
-    font-size:13px;
-    margin:10px 0;
+.why h3{
+    font-size:9px;
+    margin:7px 0;
 }
 
 .why p{
-    color:#888;
-    font-size:10px;
+    color:#777;
+    font-size:7px;
 }
 
-/* VALUES */
+/* ================= VALUES ================= */
+
 .values{
     display:grid;
     grid-template-columns:repeat(3,1fr);
-    gap:18px;
-    margin-top:30px;
+    gap:15px;
+    margin-top:22px;
 }
 
 .value{
+    padding:20px;
     border:1px solid #292929;
-    padding:25px;
-    background:#0c0d0e;
+    background:linear-gradient(145deg,#141617,#080909);
+    box-shadow:
+        8px 8px 0 rgba(245,197,66,.025),
+        0 15px 25px rgba(0,0,0,.55);
 }
 
 .stars{
     color:#f5c542;
+    font-size:11px;
 }
 
-/* CONTACT */
-.contact-grid{
+.value h3{
+    font-size:11px;
+    margin:6px 0;
+}
+
+.value p{
+    color:#777;
+    font-size:8px;
+}
+
+/* ================= CONTACT ================= */
+
+.contact{
     display:grid;
     grid-template-columns:1fr 1fr;
-    gap:50px;
+    gap:35px;
     align-items:center;
 }
 
 .contact-info{
     display:grid;
-    gap:15px;
-    margin-top:25px;
+    gap:9px;
+    margin-top:17px;
 }
 
 .contact-item{
-    padding:15px;
     border-left:2px solid #f5c542;
-    background:#0b0c0d;
+    padding:10px 13px;
+    background:linear-gradient(90deg,#101112,#080909);
+    box-shadow:0 7px 15px rgba(0,0,0,.4);
 }
 
 .contact-item span{
     display:block;
-    color:#888;
-    font-size:10px;
+    color:#777;
+    font-size:7px;
 }
 
 .contact-item strong{
-    font-size:14px;
+    font-size:10px;
 }
 
 .contact-box{
-    min-height:280px;
+    min-height:250px;
+    padding:30px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    flex-direction:column;
+    text-align:center;
     border:1px solid #f5c542;
     background:
-    radial-gradient(circle,rgba(245,197,66,.12),transparent 60%),
-    #090909;
-    display:flex;
-    flex-direction:column;
-    justify-content:center;
-    align-items:center;
-    text-align:center;
-    padding:35px;
+        linear-gradient(rgba(0,0,0,.55),rgba(0,0,0,.82)),
+        url("https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=1400&q=90")
+        center/cover;
+    box-shadow:
+        0 20px 40px rgba(0,0,0,.7),
+        inset 0 0 40px rgba(245,197,66,.06);
 }
 
 .contact-box h2{
-    font-size:35px;
+    font-size:31px;
+}
+
+.contact-box h2 span{
+    color:#f5c542;
+}
+
+.contact-box p{
+    color:#ddd;
+    font-size:8px;
 }
 
 .whatsapp{
     background:#16c76a;
-    color:#fff;
     border-color:#16c76a;
-    margin-top:20px;
+    color:#fff;
+    box-shadow:
+        0 7px 0 #087d42,
+        0 12px 25px rgba(0,0,0,.6);
 }
 
-/* FOOTER */
+/* ================= FOOTER ================= */
+
 footer{
+    padding:35px 0 15px;
     background:#020202;
-    padding:45px 0 25px;
 }
 
 .footer-grid{
     display:grid;
     grid-template-columns:2fr 1fr 1fr;
-    gap:40px;
+    gap:35px;
 }
 
 footer h3{
     color:#f5c542;
-    margin-bottom:15px;
+    font-size:12px;
+    margin-bottom:9px;
 }
 
-footer p,footer a{
-    color:#777;
-    font-size:12px;
+footer p,
+footer a{
+    color:#666;
+    font-size:8px;
 }
 
 .footer-links{
     display:grid;
-    gap:8px;
+    gap:6px;
+}
+
+.footer-links a:hover{
+    color:#f5c542;
 }
 
 .copyright{
     border-top:1px solid #222;
-    margin-top:35px;
-    padding-top:20px;
+    margin-top:25px;
+    padding-top:13px;
     text-align:center;
     color:#555;
-    font-size:10px;
+    font-size:7px;
 }
 
-/* FLOATING WHATSAPP */
+/* ================= FLOAT WHATSAPP ================= */
+
 .float-wa{
     position:fixed;
-    right:22px;
-    bottom:22px;
-    width:58px;
-    height:58px;
+    right:20px;
+    bottom:20px;
+    width:55px;
+    height:55px;
     border-radius:50%;
-    background:#18c96d;
+    background:#19ca6d;
     color:#fff;
     display:flex;
     align-items:center;
     justify-content:center;
-    font-size:28px;
-    z-index:999;
-    box-shadow:0 5px 25px rgba(24,201,109,.3);
+    font-size:25px;
+    z-index:1000;
+    border:2px solid #fff;
+    box-shadow:
+        0 0 0 5px rgba(25,202,109,.12),
+        0 10px 25px rgba(0,0,0,.7);
+    transition:.3s;
 }
 
-/* MOBILE */
+.float-wa:hover{
+    transform:scale(1.1);
+}
+
+/* ================= MOBILE ================= */
+
 @media(max-width:850px){
 
+    .menu-btn{
+        display:block;
+    }
+
     .menu{
-        position:absolute;
-        top:65px;
-        left:0;
-        width:100%;
-        background:#070808;
         display:none;
+        position:absolute;
+        top:64px;
+        left:0;
+        right:0;
         flex-direction:column;
         gap:0;
+        background:#050606;
         border-bottom:1px solid #333;
     }
 
@@ -612,7 +863,7 @@ footer p,footer a{
     }
 
     .menu li{
-        border-top:1px solid #222;
+        border-bottom:1px solid #222;
     }
 
     .menu a{
@@ -620,29 +871,25 @@ footer p,footer a{
         padding:15px 25px;
     }
 
-    .menu-btn{
-        display:block;
-    }
-
-    .hero{
-        min-height:600px;
-    }
-
-    .hero h1{
-        font-size:55px;
-    }
-
-    .about-grid,
-    .contact-grid,
-    .mission-grid{
+    .ceo,
+    .about,
+    .business-head,
+    .services-wrap,
+    .products,
+    .leadership,
+    .contact{
         grid-template-columns:1fr;
     }
 
-    .business-grid{
-        grid-template-columns:1fr 1fr;
+    .business-photos{
+        grid-template-columns:repeat(2,1fr);
     }
 
     .services{
+        grid-template-columns:1fr 1fr;
+    }
+
+    .product-grid{
         grid-template-columns:1fr 1fr;
     }
 
@@ -650,22 +897,15 @@ footer p,footer a{
         grid-template-columns:repeat(2,1fr);
     }
 
-    .values{
-        grid-template-columns:1fr;
-    }
-
     .stats-grid{
         grid-template-columns:1fr 1fr;
+        gap:15px;
     }
 
     .stat{
-        border-bottom:1px solid #292929;
-    }
-
-    .ceo-box{
-        flex-direction:column;
-        text-align:center;
-        padding:30px 20px;
+        border-right:0;
+        border-bottom:1px solid #333;
+        padding-bottom:12px;
     }
 
     .footer-grid{
@@ -673,39 +913,53 @@ footer p,footer a{
     }
 }
 
-@media(max-width:550px){
-
-    .container{
-        width:92%;
-    }
+@media(max-width:500px){
 
     .topbar{
-        font-size:8px;
+        font-size:7px;
     }
 
-    .logo{
-        font-size:17px;
+    .hero{
+        min-height:570px;
     }
 
     .hero h1{
-        font-size:46px;
+        font-size:50px;
     }
 
-    .hero p{
-        font-size:13px;
-    }
-
-    .business-grid,
-    .services{
+    .business-photos,
+    .services,
+    .product-grid{
         grid-template-columns:1fr;
     }
 
-    .section-title{
-        font-size:29px;
+    .about{
+        gap:20px;
     }
 
-    .stats-grid{
-        grid-template-columns:1fr 1fr;
+    .photo-box{
+        width:100%;
+        height:230px;
+        transform:none;
+    }
+
+    .ceo-photo{
+        width:100%;
+        height:210px;
+        transform:none;
+    }
+
+    .lead-photo{
+        width:100%;
+        height:280px;
+    }
+
+    .checks{
+        grid-template-columns:1fr;
+    }
+
+    .mission-grid{
+        grid-template-columns:1fr;
     }
 }
 </style>
@@ -715,34 +969,34 @@ footer p,footer a{
 
 <!-- TOP BAR -->
 <div class="topbar">
-    <span>HANIFE INDUSTRY</span> —
-    PREMIUM INDUSTRIAL SOLUTIONS
-    <span>|</span>
-    QUALITY • TRUST • PROFESSIONALISM
-    <span>|</span>
-    CEO ALI ASGHAR
+<b>HANIFE INDUSTRY</b> —
+PREMIUM INDUSTRIAL SOLUTIONS
+<b>|</b>
+QUALITY • TRUST • PROFESSIONALISM
+<b>|</b>
+CEO ALI ASGHAR
 </div>
 
 <!-- HEADER -->
 <header>
 <div class="container nav">
 
-    <a href="#home" class="logo">
-        HANIFE <span>INDUSTRY</span>
-        <small>INDUSTRIAL SOLUTIONS</small>
-    </a>
+<a href="#home" class="logo">
+HANIFE <span>INDUSTRY</span>
+<small>INDUSTRIAL SOLUTIONS</small>
+</a>
 
-    <div class="menu-btn" onclick="toggleMenu()">☰</div>
+<div class="menu-btn" onclick="toggleMenu()">☰</div>
 
-    <ul class="menu" id="menu">
-        <li><a href="#home" onclick="closeMenu()">HOME</a></li>
-        <li><a href="#about" onclick="closeMenu()">ABOUT</a></li>
-        <li><a href="#business" onclick="closeMenu()">BUSINESS</a></li>
-        <li><a href="#services" onclick="closeMenu()">SERVICES</a></li>
-        <li><a href="#products" onclick="closeMenu()">PRODUCTS</a></li>
-        <li><a href="#ceo" onclick="closeMenu()">CEO</a></li>
-        <li><a href="#contact" onclick="closeMenu()">CONTACT</a></li>
-    </ul>
+<ul class="menu" id="menu">
+<li><a href="#home" onclick="closeMenu()">HOME</a></li>
+<li><a href="#about" onclick="closeMenu()">ABOUT</a></li>
+<li><a href="#business" onclick="closeMenu()">BUSINESS</a></li>
+<li><a href="#services" onclick="closeMenu()">SERVICES</a></li>
+<li><a href="#products" onclick="closeMenu()">PRODUCTS</a></li>
+<li><a href="#ceo" onclick="closeMenu()">CEO</a></li>
+<li><a href="#contact" onclick="closeMenu()">CONTACT</a></li>
+</ul>
 
 </div>
 </header>
@@ -751,339 +1005,136 @@ footer p,footer a{
 <section class="hero" id="home">
 <div class="container hero-content">
 
-    <div class="badge">
-        ESTABLISHED • PROFESSIONAL • INDUSTRIAL
-    </div>
+<div class="badge">
+ESTABLISHED • PROFESSIONAL • INDUSTRIAL
+</div>
 
-    <h1>
-        HANIFE<br>
-        <span>INDUSTRY</span>
-    </h1>
+<h1>
+HANIFE<br>
+<span>INDUSTRY</span>
+</h1>
 
-    <p>
-        Building a professional industrial identity through quality,
-        reliable solutions, modern thinking and long-term business
-        relationships.
-    </p>
+<p>
+Building a professional industrial identity through quality,
+reliable solutions, modern thinking and long-term business
+relationships.
+</p>
 
-    <div class="buttons">
-        <a class="btn btn-primary" href="#business">
-            EXPLORE BUSINESS
-        </a>
+<div class="buttons">
+<a href="#business" class="btn btn-primary">
+EXPLORE BUSINESS
+</a>
 
-        <a class="btn btn-outline" href="#contact">
-            CONTACT US
-        </a>
-    </div>
+<a href="#contact" class="btn btn-outline">
+CONTACT US
+</a>
+</div>
 
 </div>
 </section>
 
 <!-- CEO -->
-<section id="ceo">
-<div class="container">
+<section class="ceo-section" id="ceo">
+<div class="container ceo">
 
-    <div class="ceo-box">
+<div class="ceo-photo">
+<img src="CEO%20ali11.png" alt="CEO Ali Asghar">
+</div>
 
-        <div class="ceo-icon">♛</div>
+<div>
+<div class="label">TOP CEO</div>
+<h2>Ali Asghar</h2>
 
-        <div>
-            <div class="section-label">TOP CEO</div>
+<div class="role">
+CHIEF EXECUTIVE OFFICER • HANIFE INDUSTRY
+</div>
 
-            <div class="ceo-name">
-                Ali Asghar
-            </div>
-
-            <div class="ceo-role">
-                CHIEF EXECUTIVE OFFICER • HANIFE INDUSTRY
-            </div>
-
-            <p class="section-text" style="margin-top:15px;">
-                A professional business leader with a clear vision
-                for industrial growth, quality and long-term business
-                success.
-            </p>
-        </div>
-
-    </div>
+<p class="desc">
+A professional business leader with a clear vision for industrial
+growth, quality and long-term business success.
+</p>
+</div>
 
 </div>
 </section>
 
 <!-- ABOUT -->
 <section id="about">
-<div class="container">
+<div class="container about">
 
-    <div class="about-grid">
+<div class="photo-box">
+<img src="1789325881089~2.jpg" alt="HANIFE INDUSTRY">
+</div>
 
-        <div class="about-card"></div>
+<div>
 
-        <div>
-            <div class="section-label">
-                ABOUT HANIFE INDUSTRY
-            </div>
+<div class="label">ABOUT HANIFE INDUSTRY</div>
 
-            <h2 class="section-title">
-                Built on <span>Trust.</span><br>
-                Driven by <span>Quality.</span>
-            </h2>
+<h2 class="title">
+Built on <span>Trust.</span><br>
+Driven by <span>Quality.</span>
+</h2>
 
-            <p class="section-text">
-                HANIFE INDUSTRY is a professional business identity
-                focused on industrial solutions, engineering,
-                construction, manufacturing and modern business services.
-            </p>
+<p class="desc">
+HANIFE INDUSTRY is a professional business identity focused on
+industrial solutions, engineering, construction, manufacturing
+and modern business services.
+</p>
 
-            <p class="section-text" style="margin-top:15px;">
-                Our approach is based on professionalism, reliable
-                service, quality standards and long-term relationships
-                with clients and business partners.
-            </p>
+<p class="desc">
+Our approach is based on professionalism, reliable service,
+quality standards and long-term relationships.
+</p>
 
-            <div class="about-list">
-                <div><b>✓</b> Professional Business Management</div>
-                <div><b>✓</b> Quality-Focused Industrial Solutions</div>
-                <div><b>✓</b> Reliable Client Support</div>
-                <div><b>✓</b> Modern Business Thinking</div>
-            </div>
-        </div>
+<div class="checks">
+<div><b>✓</b> Professional Business Management</div>
+<div><b>✓</b> Quality-Focused Solutions</div>
+<div><b>✓</b> Reliable Client Support</div>
+<div><b>✓</b> Modern Business Thinking</div>
+</div>
 
-    </div>
-
+</div>
 </div>
 </section>
 
 <!-- BUSINESS -->
 <section id="business">
-<div class="container">
+<div class="container business-head">
 
-    <div class="section-label">
-        OUR BUSINESS AREAS
-    </div>
+<div>
+<div class="label">OUR BUSINESS AREAS</div>
 
-    <h2 class="section-title">
-        Industrial <span>Business Solutions</span>
-    </h2>
+<h2 class="title">
+Industrial <span>Business Solutions</span>
+</h2>
 
-    <p class="section-text">
-        A modern business platform covering multiple industrial,
-        engineering and commercial areas.
-    </p>
-
-    <div class="business-grid">
-
-        <div class="card">
-            <div class="card-icon">⚙</div>
-            <h3>Industrial Engineering</h3>
-            <p>Professional engineering concepts and industrial support.</p>
-        </div>
-
-        <div class="card">
-            <div class="card-icon">🏗</div>
-            <h3>Construction</h3>
-            <p>Construction support and project-focused solutions.</p>
-        </div>
-
-        <div class="card">
-            <div class="card-icon">▣</div>
-            <h3>Manufacturing</h3>
-            <p>Modern manufacturing and production-related solutions.</p>
-        </div>
-
-        <div class="card">
-            <div class="card-icon">◉</div>
-            <h3>Technology</h3>
-            <p>Technology-focused business and industrial services.</p>
-        </div>
-
-        <div class="card">
-            <div class="card-icon">◈</div>
-            <h3>Industrial Operations</h3>
-            <p>Reliable operational planning and professional support.</p>
-        </div>
-
-        <div class="card">
-            <div class="card-icon">◆</div>
-            <h3>Business Management</h3>
-            <p>Professional business management and development.</p>
-        </div>
-
-    </div>
-
+<p class="desc">
+A modern business platform covering multiple industrial,
+engineering and commercial areas.
+</p>
 </div>
-</section>
 
-<!-- SERVICES -->
-<section id="services">
-<div class="container">
+<div class="business-photos">
 
-    <div class="section-label">
-        WHAT WE DO
-    </div>
-
-    <h2 class="section-title">
-        Professional <span>Services</span>
-    </h2>
-
-    <p class="section-text">
-        Practical and professional services designed for modern
-        industrial and commercial requirements.
-    </p>
-
-    <div class="services">
-
-        <div class="service">
-            <div class="service-icon">⚙</div>
-            <h3>Industrial Solutions</h3>
-            <p>Professional industrial support.</p>
-        </div>
-
-        <div class="service">
-            <div class="service-icon">🏢</div>
-            <h3>Construction Support</h3>
-            <p>Project and construction assistance.</p>
-        </div>
-
-        <div class="service">
-            <div class="service-icon">▣</div>
-            <h3>Manufacturing</h3>
-            <p>Production and manufacturing support.</p>
-        </div>
-
-        <div class="service">
-            <div class="service-icon">💼</div>
-            <h3>Business Consulting</h3>
-            <p>Professional business guidance.</p>
-        </div>
-
-        <div class="service">
-            <div class="service-icon">🔧</div>
-            <h3>Technical Services</h3>
-            <p>Technical and operational solutions.</p>
-        </div>
-
-        <div class="service">
-            <div class="service-icon">📈</div>
-            <h3>Business Development</h3>
-            <p>Modern growth and development thinking.</p>
-        </div>
-
-    </div>
-
+<div class="pic">
+<img src="https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?auto=format&fit=crop&w=900&q=90" alt="Industrial Engineering">
+<span>Industrial Engineering</span>
 </div>
-</section>
 
-<!-- PRODUCTS -->
-<section id="products">
-<div class="container">
-
-    <div class="section-label">
-        OUR PRODUCTS & SECTORS
-    </div>
-
-    <h2 class="section-title">
-        Quality Driven <span>Categories</span>
-    </h2>
-
-    <p class="section-text">
-        Flexible business categories designed around industrial
-        and commercial requirements.
-    </p>
-
-    <div class="business-grid">
-
-        <div class="card">
-            <div class="card-icon">🏭</div>
-            <h3>Industrial Equipment</h3>
-            <p>
-                Industrial equipment and technical requirements
-                for professional operations.
-            </p>
-        </div>
-
-        <div class="card">
-            <div class="card-icon">🏗</div>
-            <h3>Construction Materials</h3>
-            <p>
-                Construction-related materials and project
-                support solutions.
-            </p>
-        </div>
-
-        <div class="card">
-            <div class="card-icon">▣</div>
-            <h3>Commercial Solutions</h3>
-            <p>
-                Modern commercial services and business
-                solutions for growing organizations.
-            </p>
-        </div>
-
-    </div>
-
+<div class="pic">
+<img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=900&q=90" alt="Construction">
+<span>Construction</span>
 </div>
-</section>
 
-<!-- STATS -->
-<section class="stats">
-<div class="container">
-
-    <div class="stats-grid">
-
-        <div class="stat">
-            <strong>01</strong>
-            <span>PROFESSIONAL VISION</span>
-        </div>
-
-        <div class="stat">
-            <strong>24/7</strong>
-            <span>BUSINESS COMMITMENT</span>
-        </div>
-
-        <div class="stat">
-            <strong>100%</strong>
-            <span>QUALITY FOCUS</span>
-        </div>
-
-        <div class="stat">
-            <strong>∞</strong>
-            <span>LONG-TERM VISION</span>
-        </div>
-
-    </div>
-
+<div class="pic">
+<img src="https://images.unsplash.com/photo-1565793298595-6a879b1d9492?auto=format&fit=crop&w=900&q=90" alt="Manufacturing">
+<span>Manufacturing</span>
 </div>
-</section>
 
-<!-- LEADERSHIP / MISSION -->
-<section>
-<div class="container">
+<div class="pic">
+<img src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=900&q=90" alt="Technology">
+<span>Technology</span>
+</div>
 
-    <div class="mission-grid">
-
-        <div>
-            <div class="section-label">LEADERSHIP</div>
-
-            <h2 class="section-title">
-                Ali <span>Asghar</span>
-            </h2>
-
-            <p class="section-text">
-                Chief Executive Officer — HANIFE INDUSTRY
-            </p>
-
-            <p class="section-text" style="margin-top:15px;">
-                HANIFE INDUSTRY is guided by a professional leadership
-                approach focused on quality, trust, responsibility
-                and long-term business development.
-            </p>
-        </div>
-
-        <div>
-            <div class="section-label">OUR DIRECTION</div>
-
-            <h2 class="section-title">
-                Mission & <span>Vision</span>
-            </h2>
-
-            <div class="
+<div class="pic">
+<img src="https://images.unsplash.com/photo-1581092160562-40aa08e78837?auto=format&fit=crop&w=900&q=90" alt="Industrial Operation
